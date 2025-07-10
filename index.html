@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +9,10 @@
       margin: 0;
       font-family: Verdana, sans-serif;
       background-color: #121212;
-      color: white;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     header {
       display: flex;
@@ -17,106 +20,112 @@
       align-items: center;
       padding: 10px 20px;
       background-color: #1e1e1e;
-      border-bottom: 1px solid #333;
     }
-    header a {
-      color: white;
-      text-decoration: none;
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+    header .actions a {
+      color: #ffffff;
       margin-left: 15px;
-      font-size: 14px;
-      background-color: #333;
-      padding: 5px 10px;
-      border-radius: 5px;
+      text-decoration: none;
+      background: #2d2d2d;
+      padding: 6px 10px;
+      border-radius: 6px;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 5px;
-      padding: 20px;
+      padding: 10px;
     }
     .card {
-      position: relative;
       background-color: #1e1e1e;
-      border-radius: 10px;
+      border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: scale(1.02);
+      position: relative;
     }
     .card img {
       width: 100%;
-      height: auto;
       display: block;
+      cursor: pointer;
     }
     .card-title {
       padding: 10px;
-      font-size: 16px;
-      color: white;
+      font-size: 0.95em;
       text-align: center;
+      cursor: pointer;
     }
     .live-badge {
       position: absolute;
-      top: 8px;
-      left: 8px;
+      top: 5px;
+      left: 5px;
       background: red;
       color: white;
-      font-size: 12px;
+      font-size: 0.75em;
       padding: 2px 6px;
       border-radius: 4px;
+      font-weight: bold;
       display: none;
     }
-    .qr-section {
+    footer {
+      margin-top: auto;
       text-align: center;
-      margin: 40px 0;
+      padding: 20px;
     }
-    .qr-section img {
-      width: 150px;
-      height: 150px;
+    .qr img {
+      width: 100px;
+      height: 100px;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>GAMEONX</h1>
-    <div>
-      <a href="https://chat.whatsapp.com/YOUR_GROUP_LINK" target="_blank">Join Grup</a>
-      <a href="https://sociabuzz.com/fiqaz/donate" target="_blank">Donasi</a>
+    <div class="actions">
+      <a href="https://chat.whatsapp.com/your-group-link" target="_blank">Join Grup</a>
+      <a href="https://saweria.co/yourdonation" target="_blank">Donasi</a>
     </div>
   </header>
 
-  <div class="grid">
-    <div class="card" data-time="2025-07-10T14:00:00Z">
+  <main class="grid" id="matchGrid">
+    <div class="card" data-time="2025-07-10T19:00:00">
       <span class="live-badge">LIVE</span>
-      <a href="https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/VSU0NlEP/live.isml/.m3u8" target="_blank">
-        <img src="https://cdn.jwplayer.com/v2/media/VSU0NlEP/poster.jpg?width=1920" alt="Belgium vs Netherlands" />
-        <div class="card-title">Belgium vs Netherlands | Week 3 | Women's VNL 2025<br>Kam 11-07-2025 01:30 WIB</div>
-      </a>
+      <img src="https://cdn.jwplayer.com/v2/media/VSU0NlEP/poster.jpg?width=1920" onclick="openStream('https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/VSU0NlEP/live.isml/.m3u8')" />
+      <div class="card-title" onclick="openStream('https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/VSU0NlEP/live.isml/.m3u8')">Belgium vs Netherlands | Week 3 | Women's VNL 2025<br>Kam 11-07-2025 01:30 WIB</div>
     </div>
-    <div class="card" data-time="2025-07-11T17:00:00Z">
+    <div class="card" data-time="2025-07-10T21:00:00">
       <span class="live-badge">LIVE</span>
-      <a href="https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/5gDCRYfN/live.isml/.m3u8" target="_blank">
-        <img src="https://cdn.jwplayer.com/v2/media/5gDCRYfN/poster.jpg?width=1920" alt="Thailand vs Germany" />
-        <div class="card-title">Thailand vs Germany | Week 3 | Women's VNL 2025<br>Kam 11-07-2025 03:45 WIB</div>
-      </a>
+      <img src="https://via.placeholder.com/300x180.png?text=Pertandingan+2" onclick="openStream('https://example.com/stream2.m3u8')" />
+      <div class="card-title" onclick="openStream('https://example.com/stream2.m3u8')">Tim C vs Tim D</div>
     </div>
-  </div>
+  </main>
 
-  <div class="qr-section">
-    <p>Scan untuk Donasi:</p>
-    <img src="https://via.placeholder.com/150.png?text=QR+Code" alt="QR Code Donasi" />
-  </div>
+  <footer class="qr">
+    <p>Scan untuk Donasi</p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://saweria.co/yourdonation&size=100x100" alt="QR Donasi" />
+  </footer>
 
   <script>
-    document.querySelectorAll('.card').forEach(card => {
-      const timeString = card.getAttribute('data-time');
-      const matchTime = new Date(timeString);
+    function openStream(url) {
+      window.open(url, '_blank');
+    }
+
+    function updateLiveBadges() {
       const now = new Date();
-      if (now >= matchTime) {
-        card.querySelector('.live-badge').style.display = 'inline-block';
-      }
-    });
+      document.querySelectorAll('.card').forEach(card => {
+        const time = new Date(card.getAttribute('data-time'));
+        const badge = card.querySelector('.live-badge');
+        if (now >= time) {
+          badge.style.display = 'inline';
+        } else {
+          badge.style.display = 'none';
+        }
+      });
+    }
+
+    updateLiveBadges();
+    setInterval(updateLiveBadges, 60000);
   </script>
 </body>
 </html>
