@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAMEONX</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Verdana, sans-serif;
+      background-color: #121212;
+      color: white;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #1e1e1e;
+      border-bottom: 1px solid #333;
+    }
+    header a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-size: 14px;
+      background-color: #333;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 5px;
+      padding: 20px;
+    }
+    .card {
+      position: relative;
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .card-title {
+      padding: 10px;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+    }
+    .live-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: red;
+      color: white;
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      display: none;
+    }
+    .qr-section {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .qr-section img {
+      width: 150px;
+      height: 150px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GAMEONX</h1>
+    <div>
+      <a href="https://chat.whatsapp.com/YOUR_GROUP_LINK" target="_blank">Join Grup</a>
+      <a href="https://saweria.co/YOUR_DONATION_LINK" target="_blank">Donasi</a>
+    </div>
+  </header>
+
+  <div class="grid">
+    <div class="card" data-time="2025-07-10T14:00:00Z">
+      <span class="live-badge">LIVE</span>
+      <a href="https://example.com/stream1.m3u8" target="_blank">
+        <img src="https://via.placeholder.com/300x170.png?text=Match+1" alt="Match 1" />
+        <div class="card-title">Belgium vs Netherlands | Week 3 | Women's VNL 2025<br>Kam 11-07-2025 01:30 WIB</div>
+      </a>
+    </div>
+    <div class="card" data-time="2025-07-11T17:00:00Z">
+      <span class="live-badge">LIVE</span>
+      <a href="https://example.com/stream2.m3u8" target="_blank">
+        <img src="https://via.placeholder.com/300x170.png?text=Match+2" alt="Match 2" />
+        <div class="card-title">Tim C vs Tim D</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="qr-section">
+    <p>Scan untuk Donasi:</p>
+    <img src="https://via.placeholder.com/150.png?text=QR+Code" alt="QR Code Donasi" />
+  </div>
+
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      const timeString = card.getAttribute('data-time');
+      const matchTime = new Date(timeString);
+      const now = new Date();
+      if (now >= matchTime) {
+        card.querySelector('.live-badge').style.display = 'inline-block';
+      }
+    });
+  </script>
+</body>
+</html>
