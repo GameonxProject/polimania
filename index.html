@@ -136,48 +136,47 @@
   </main>
 
 <script>
-   document.querySelectorAll('.card').forEach(async card => {
-  const timeAttr = card.getAttribute('data-time');
-  const streamUrl = card.querySelector('a')?.href;
-
-  // 1. Hapus jika stream mati
-  let streamActive = false;
-  if (streamUrl) {
+  <script>
+  async function checkStream(url) {
     try {
-      const res = await fetch(streamUrl, { method: 'HEAD' });
-      streamActive = res.ok;
-    } catch {
-      streamActive = false;
+      const res = await fetch(url, { method: 'HEAD' });
+      return res.ok;
+    } catch (err) {
+      return false;
     }
   }
 
-  if (!streamActive) {
-    card.remove();
-    return;
-  }
+  document.querySelectorAll('.card').forEach(async card => {
+    const timeAttr = card.getAttribute('data-time');
+    const linkEl = card.querySelector('a');
+    const streamUrl = linkEl ? linkEl.href : null;
 
-  // 2. Tampilkan badge LIVE jika waktu sesuai
-  if (timeAttr) {
-    const now = new Date();
-    const matchTime = new Date(timeAttr);
-    const diff = (now - matchTime) / 1000;
-
-    if (diff >= -600 && diff <= 7200) {
-      const badge = document.createElement('div');
-      badge.className = 'live-badge';
-      badge.textContent = 'LIVE';
-      card.appendChild(badge);
-      badge.style.display = 'inline-block';
-    } else if (diff > 7200) {
-      card.remove();
-    }
-  }
-});
-
-        }
+    // 1. Hapus jika stream mati
+    if (streamUrl) {
+      const streamActive = await checkStream(streamUrl);
+      if (!streamActive) {
+        card.remove();
+        return;
       }
-      
-    });
-  </script>
-</body>
+    }
+
+    // 2. Badge LIVE berdasarkan waktu
+    if (timeAttr) {
+      const matchTime = new Date(timeAttr);
+      const now = new Date();
+      const timeDiff = (now - matchTime) / 1000;
+
+      if (timeDiff >= -600 && timeDiff <= 7200) {
+        const badge = document.createElement('div');
+        badge.className = 'live-badge';
+        badge.textContent = 'LIVE';
+        card.appendChild(badge);
+        badge.style.display = 'inline-block';
+      } else if (timeDiff > 7200) {
+        card.remove();
+      }
+    }
+  });
+</script>
+  </body>
 </html>
