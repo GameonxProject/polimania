@@ -1,175 +1,139 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GAMEONX</title>
   <style>
     body {
       margin: 0;
       font-family: Verdana, sans-serif;
-      background-color: #121212;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      background-color: #111;
+      color: #fff;
     }
+
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: #1a1a1a;
       padding: 10px 20px;
-      background-color: #1e1e1e;
+      border-bottom: 1px solid #333;
     }
-    header h1 {
-      margin: 0;
+
+    .title {
       font-size: 1.5em;
+      font-weight: bold;
+      color: #00ff88;
     }
-    header .actions a {
-      color: #ffffff;
+
+    .header-links a {
       margin-left: 15px;
+      padding: 6px 12px;
+      border-radius: 5px;
+      background: #333;
+      color: #fff;
       text-decoration: none;
-      background: #2d2d2d;
-      padding: 6px 10px;
-      border-radius: 6px;
+      font-size: 0.9em;
     }
-    .grid {
+
+    .header-links a:hover {
+      background: #555;
+    }
+
+    .container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 5px;
-      padding: 10px;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      padding: 20px;
     }
+
     .card {
-      background-color: #1e1e1e;
+      background: #1e1e1e;
+      color: #fff;
+      border: 1px solid #333;
       border-radius: 8px;
       overflow: hidden;
       position: relative;
+      transition: 0.2s;
     }
+
+    .card:hover {
+      transform: scale(1.01);
+    }
+
     .card img {
-      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-bottom: 1px solid #333;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: inherit;
       display: block;
-      cursor: pointer;
-    }
-    .card-title {
       padding: 10px;
-      font-size: 0.95em;
-      text-align: center;
-      cursor: pointer;
     }
+
+    small {
+      color: #bbb;
+      display: block;
+      margin: 5px 0 10px;
+    }
+
     .live-badge {
       position: absolute;
-      top: 5px;
-      left: 5px;
+      top: 8px;
+      left: 8px;
       background: red;
       color: white;
-      font-size: 0.75em;
       padding: 2px 6px;
+      font-size: 0.75em;
       border-radius: 4px;
       font-weight: bold;
       display: none;
-    }
-    footer {
-      margin-top: auto;
-      text-align: center;
-      padding: 20px;
-    }
-    .qr img {
-      width: 200px;
-      height: 200px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>GAMEONX</h1>
-    <div class="actions">
-      <a href="https://chat.whatsapp.com/your-group-link" target="_blank">Join Grup</a>
-      <a href="https://sociabuzz.com/fiqaz/donate" target="_blank">Donasi</a>
+    <div class="title">GAMEONX</div>
+    <div class="header-links">
+      <a href="https://t.me/group-link" target="_blank">Join Grup</a>
+      <a href="https://saweria.co/donasi-link" target="_blank">Donasi</a>
     </div>
   </header>
 
-  <main class="grid" id="matchGrid">
-    <div class="card" data-time="2025-07-11T01:30:00+07:00">
-      <span class="live-badge">LIVE</span>
-      <img src="https://cdn.jwplayer.com/v2/media/VSU0NlEP/poster.jpg?width=1920" onclick="openStream('https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/VSU0NlEP/live.isml/.m3u8')" />
-      <div class="card-title" onclick="openStream('https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/VSU0NlEP/live.isml/.m3u8')">Belgium vs Netherlands | Week 3 | Women's VNL 2025<br>Kam 11-07-2025 01:30 WIB</div>
-    </div>
-    <div class="card">
-        <a href="https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/riQLv22P/live.isml/.m3u8" rel="noreferrer" target="_blank">
-          <img src="https://cdn.jwplayer.com/v2/media/riQLv22P/poster.jpg?width=320" alt="Bulgaria vs France | Week 3 | Women's VNL 2025">
-          Bulgaria vs France | Week 3 | Women's VNL 2025
-        </a>
+  <main>
+    <div class="container">
+      <div class="card" data-time="2025-07-11T17:20:00+07:00">
         <span class="live-badge">LIVE</span>
-    </div><div class="card">
         <a href="https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/y29krLpD/live.isml/.m3u8" rel="noreferrer" target="_blank">
-          <img src="https://cdn.jwplayer.com/v2/media/y29krLpD/poster.jpg?width=320" alt="Poland vs Brazil | Week 3 | Women's VNL 2025">
+          <img src="https://cdn.jwplayer.com/v2/media/y29krLpD/poster.jpg?width=320" alt="Poland vs Brazil | Week 3 | Women's VNL 2025" />
           Poland vs Brazil | Week 3 | Women's VNL 2025
+          <br><small>Jum 11-07-2025 17:20 WIB</small>
         </a>
-        <br><small>Jum 11-07-2025 17:20 WIB</small></br>
-      </div><div class="card">
-        <a href="https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/ZDtvoomK/live.isml/.m3u8" rel="noreferrer" target="_blank">
-          <img src="https://cdn.jwplayer.com/v2/media/ZDtvoomK/poster.jpg?width=320" alt="Belgium vs Serbia | Week 3 | Women's VNL 2025">
-          Belgium vs Serbia | Week 3 | Women's VNL 2025
-        </a>
-        <br><small>Jum 11-07-2025 22:00 WIB</small></br>
-      </div><div class="card">
-        <a href="https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/OSrskWhC/live.isml/.m3u8" rel="noreferrer" target="_blank">
-          <img src="https://cdn.jwplayer.com/v2/media/OSrskWhC/poster.jpg?width=320" alt="Japan - Poland | Quarter Final 2 (CRO) | Girl's U19 World Champs 2025">
-          Japan - Poland | Quarter Final 2 (CRO) | Girl's U19 World Champs 2025
-        </a>
-        <br><small>Sab 11-07-2025 23:15 WIB</small></br>
-      </div><div class="card">
-        <a href="https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/tw5SpR52/live.isml/.m3u8" rel="noreferrer" target="_blank">
-          <img src="https://cdn.jwplayer.com/v2/media/tw5SpR52/poster.jpg?width=320" alt="Czechia vs Turkiye | Week 3 | Women's VNL 2025">
-          Czechia vs Turkiye | Week 3 | Women's VNL 2025
-        </a>
-        <br><small>Sab 12-07-2025 01:30 WIB</small></br>
-      </div><div class="card">
-        <a href="https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/5Dku91aj/live.isml/.m3u8" rel="noreferrer" target="_blank">
-          <img src="https://cdn.jwplayer.com/v2/media/5Dku91aj/poster.jpg?width=320" alt="Thailand vs Dominican Republic | Week 3 | Women's VNL 2025">
-          Thailand vs Dominican Republic | Week 3 | Women's VNL 2025
-        </a>
-        <br><small>Sab 12-07-2025 04:00 WIB</small></br>
-      </div><div class="card">
-        <a href="https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/4KG29NOl/live.isml/.m3u8" rel="noreferrer" target="_blank">
-          <img src="https://cdn.jwplayer.com/v2/media/4KG29NOl/poster.jpg?width=320" alt="Canada vs China | Week 3 | Women's VNL 2025">
-          Canada vs China | Week 3 | Women's VNL 2025
-        </a>
-        <br><small>Sab 12-07-2025 07:30 WIB</small></br>
-      </div><div class="card">
-        <a href="https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/n9E3ikFZ/live.isml/.m3u8" rel="noreferrer" target="_blank">
-          <img src="https://cdn.jwplayer.com/v2/media/n9E3ikFZ/poster.jpg?width=320" alt="Korea vs Bulgaria | Week 3 | Women's VNL 2025">
-          Korea vs Bulgaria | Week 3 | Women's VNL 2025
-        </a>
-        <br><small>Sab 12-07-2025 13:30 WIB</small></br>
-      </div>      </div>
-    </main>
+      </div>
 
-  <footer class="qr">
-    <p>Scan untuk Donasi</p>
-    <img src="https://sociabuzz.com/pro/tribe/qrcode/v2/3328917924" alt="QR Donasi" />
-  </footer>
+      <!-- Tambahkan semua kartu lain di sini, gunakan format data-time ISO 8601 (WIB: GMT+7) -->
+    </div>
+  </main>
 
   <script>
-    function openStream(url) {
-      window.open(url, '_blank');
-    }
+    // Script untuk menampilkan badge LIVE berdasarkan waktu lokal
+    document.querySelectorAll('.card').forEach(card => {
+      const timeAttr = card.getAttribute('data-time');
+      if (timeAttr) {
+        const matchTime = new Date(timeAttr);
+        const now = new Date();
+        const timeDiff = (now - matchTime) / 1000;
 
-    function updateLiveBadges() {
-      const now = new Date();
-      document.querySelectorAll('.card').forEach(card => {
-        const time = new Date(card.getAttribute('data-time'));
-        const badge = card.querySelector('.live-badge');
-        if (now >= time) {
-          badge.style.display = 'inline';
-        } else {
-          badge.style.display = 'none';
+        // Tampilkan LIVE jika pertandingan dimulai <= 10 menit yang lalu dan masih dalam 2 jam
+        if (timeDiff >= -600 && timeDiff <= 7200) {
+          card.querySelector('.live-badge').style.display = 'inline-block';
         }
-      });
-    }
-
-    updateLiveBadges();
-    setInterval(updateLiveBadges, 60000);
+      }
+    });
   </script>
 </body>
 </html>
