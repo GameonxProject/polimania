@@ -123,50 +123,26 @@
         </a>
       </div>
 
-        </a>
-      </div>
 
 
     </div>
   </main>
 
-  <script>
-  async function checkStream(url) {
-    try {
-      const res = await fetch(url, { method: 'HEAD' });
-      return res.ok;
-    } catch (err) {
-      return false;
-    }
-  }
+<script>
+    // Script untuk menampilkan badge LIVE berdasarkan waktu lokal
+    document.querySelectorAll('.card').forEach(card => {
+      const timeAttr = card.getAttribute('data-time');
+      if (timeAttr) {
+        const matchTime = new Date(timeAttr);
+        const now = new Date();
+        const timeDiff = (now - matchTime) / 1000;
 
-  document.querySelectorAll('.card').forEach(async card => {
-    const timeAttr = card.getAttribute('data-time');
-    const linkEl = card.querySelector('a');
-    const streamUrl = linkEl ? linkEl.href : null;
-
-    if (streamUrl) {
-      const streamActive = await checkStream(streamUrl);
-      if (!streamActive) {
-        card.remove();
-        return;
+        // Tampilkan LIVE jika pertandingan dimulai <= 10 menit yang lalu dan masih dalam 2 jam
+        if (timeDiff >= -600 && timeDiff <= 7200) {
+          card.querySelector('.live-badge').style.display = 'inline-block';
+        }
       }
-    }
-
-    if (timeAttr) {
-      const matchTime = new Date(timeAttr);
-      const now = new Date();
-      const timeDiff = (now - matchTime) / 1000;
-
-      if (timeDiff >= -600 && timeDiff <= 7200) {
-        const badge = document.createElement('div');
-        badge.className = 'live-badge';
-        badge.textContent = 'LIVE';
-        card.appendChild(badge);
-        badge.style.display = 'inline-block';
-      } else if (timeDiff > 7200) {
-        card.remove();
-      }
-    }
-  });
-</script>
+    });
+  </script>
+</body>
+</html>
