@@ -122,38 +122,58 @@
           <br><small>Jum 11-07-2025 22:00 WIB</small><br>
         </a>
       </div>
-
+      <div class="card" data-time="2025-07-11T22:00:00+07:00">
+        <span class="live-badge">LIVE</span>
+      <a href="https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/ZDtvoomK/live.isml/.m3u8" rel="noreferrer" target="_blank">
+          <img src="https://cdn.jwplayer.com/v2/media/ZDtvoomK/poster.jpg?width=320" alt="Belgium vs Serbia | Week 3 | Women's VNL 2025">
+          Belgium vs Serbia | Week 3 | Women's VNL 2025
+          <br><small>Jum 11-07-2025 22:00 WIB</small><br>
+        </a>
+      </div>
 
 
     </div>
   </main>
 
 <script>
-    // Script untuk menampilkan badge LIVE berdasarkan waktu lokal
-    document.querySelectorAll('.card').forEach(card => {
-      const timeAttr = card.getAttribute('data-time');
-      if (timeAttr) {
-        const matchTime = new Date(timeAttr);
-        const now = new Date();
-        const timeDiff = (now - matchTime) / 1000;
+   document.querySelectorAll('.card').forEach(async card => {
+  const timeAttr = card.getAttribute('data-time');
+  const streamUrl = card.querySelector('a')?.href;
 
-        // Tampilkan LIVE jika pertandingan dimulai <= 10 menit yang lalu dan masih dalam 2 jam
-        if (timeDiff >= -600 && timeDiff <= 7200) {
-          card.querySelector('.live-badge').style.display = 'inline-block';
-        }
-      }
-    document.querySelectorAll('.card').forEach(async card => {
-      const linkEl = card.querySelector('a');
-      const streamUrl = linkEl ? linkEl.href : null;
+  // 1. Hapus jika stream mati
+  let streamActive = false;
+  if (streamUrl) {
+    try {
+      const res = await fetch(streamUrl, { method: 'HEAD' });
+      streamActive = res.ok;
+    } catch {
+      streamActive = false;
+    }
+  }
 
-      if (streamUrl) {
-        try {
-          const res = await fetch(streamUrl, { method: 'HEAD' });
-          if (!res.ok) {
-            card.remove();
-          }
-        } catch (err) {
-          card.remove();
+  if (!streamActive) {
+    card.remove();
+    return;
+  }
+
+  // 2. Tampilkan badge LIVE jika waktu sesuai
+  if (timeAttr) {
+    const now = new Date();
+    const matchTime = new Date(timeAttr);
+    const diff = (now - matchTime) / 1000;
+
+    if (diff >= -600 && diff <= 7200) {
+      const badge = document.createElement('div');
+      badge.className = 'live-badge';
+      badge.textContent = 'LIVE';
+      card.appendChild(badge);
+      badge.style.display = 'inline-block';
+    } else if (diff > 7200) {
+      card.remove();
+    }
+  }
+});
+
         }
       }
       
