@@ -142,6 +142,21 @@
           card.querySelector('.live-badge').style.display = 'inline-block';
         }
       }
+    document.querySelectorAll('.card').forEach(async card => {
+      const linkEl = card.querySelector('a');
+      const streamUrl = linkEl ? linkEl.href : null;
+
+      if (streamUrl) {
+        try {
+          const res = await fetch(streamUrl, { method: 'HEAD' });
+          if (!res.ok) {
+            card.remove();
+          }
+        } catch (err) {
+          card.remove();
+        }
+      }
+      
     });
   </script>
 </body>
