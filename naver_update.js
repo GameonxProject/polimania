@@ -1,39 +1,75 @@
-const fs = require("fs");
-const puppeteer = require("puppeteer");
+// naver_update.js
+import fs from "fs";
+import puppeteer from "puppeteer";
 
-(async () => {
+async function scrapeNaver() {
   const browser = await puppeteer.launch({
-    headless: "new",
-    args: ["--no-sandbox", "--disable-setuid-sandbox"]
+    headless: true,
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
+
   const page = await browser.newPage();
-  await page.goto("https://sports.news.naver.com/volleyball/schedule/index", {
-    waitUntil: "networkidle2",
-  });
 
+  // URL jadwal voli di Naver Sports (contoh, bisa kamu sesuaikan)
+  const url = "https://sports.naver.com/volleyball/schedule/index";
+
+  await page.goto(url, { waitUntil: "networkidle2" });
+
+  // Ambil elemen pertandingan
   const matches = await page.evaluate(() => {
-    const rows = document.querySelectorAll(".sch_tb tbody tr");
-    const data = [];
-    rows.forEach((row) => {
-      const teams = row.querySelectorAll("span.team");
-      const timeEl = row.querySelector("span.time");
-      if (teams.length === 2 && timeEl) {
-        const home = teams[0].innerText.trim();
-        const away = teams[1].innerText.trim();
-        const timeStr = timeEl.innerText.trim();
+    const items = [];
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
 
-        data.push({
-          title: `${home} vs ${away}`,
-          start: new Date().toISOString(), // TODO: parse timeStr ke ISO
-          src: "",
-          poster: "assets/logotvgonx.png",
-        });
+    function formatDate(d) {
+      return d.toISOString().split("T")[0]; // YYYY-MM-DD
+    }
+
+    const validDates = [formatDate(today), formatDate(tomorrow)];
+
+    document.querySelectorAll(".sch_tb tbody tr").forEach((row) => {
+      const dateCell = row.closest("table").querySelector("caption")?.innerText;
+      if (!dateCell) return;
+
+      // Contoh caption di Naver: "2025.09.15 (월)"
+      const dateMatch = dateCell.match(/(\d{4})\.(\d{2})\.(\d{2})/);
+      if (!dateMatch) return;
+
+      const matchDate = `${dateMatch[1]}-${dateMatch[2]}-${dateMatch[3]}`;
+      if (!validDates.includes(matchDate)) return;
+
+      const time = row.querySelector(".time")?.innerText.trim();
+      const teams = row.querySelector(".team")?.innerText.trim();
+      const title = teams || "Pertandingan Voli";
+
+      let startISO = "";
+      if (time) {
+        const [hh, mm] = time.split(":");
+        const dt = new Date(`${matchDate}T${hh}:${mm}:00+09:00`); // KST (UTC+9)
+        startISO = dt.toISOString();
       }
+
+      items.push({
+        title,
+        start: startISO,
+        src: "",
+        poster: "assets/logotvgonx.png",
+      });
     });
-    return data;
+
+    return items;
   });
 
   await browser.close();
+
+  // Simpan ke naver.json
   fs.writeFileSync("naver.json", JSON.stringify(matches, null, 2), "utf-8");
+
   console.log(`✅ naver.json diperbarui: ${matches.length} pertandingan`);
-})();
+}
+
+scrapeNaver().catch((err) => {
+  console.error("❌ Error scraping:", err);
+  process.exit(1);
+});
