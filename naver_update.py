@@ -1,54 +1,62 @@
 import requests
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+from bs4 import BeautifulSoup
 
-# Endpoint API Naver
-url = "https://api-gw.sports.naver.com/schedule/calendar"
+# URL contoh jadwal voli di Naver Sports (ubah sesuai liga/event yang kamu mau)
+NAVER_URL = "https://sports.news.naver.com/volleyball/schedule/index"
 
-# Ambil jadwal hari ini + besok
-dates = [
-    datetime.now().strftime("%Y-%m-%d"),
-    (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
-]
+# File output JSON
+OUTPUT_FILE = "naver.json"
 
-matches = []
+def fetch_matches():
+    """Ambil jadwal pertandingan dari Naver Sports"""
+    resp = requests.get(NAVER_URL, headers={"User-Agent": "Mozilla/5.0"})
+    resp.raise_for_status()
+    soup = BeautifulSoup(resp.text, "html.parser")
 
-for d in dates:
-    params = {
-        "superCategoryId": "volleyball",
-        "categoryIds": "kovo,kwovo,volleyball,volleyballetc",
-        "date": d
-    }
-    res = requests.get(url, params=params)
-    data = res.json()
+    matches = []
+    now = datetime.now(timezone.utc)
 
-    for game in data.get("calendarGames", []):
-        schedule = game.get("schedule", {})
-        home = schedule.get("homeTeam", {}).get("name", "")
-        away = schedule.get("awayTeam", {}).get("name", "")
-        start = schedule.get("startTime", "")
-        title = f"{home} vs {away}"
+    # Contoh scraping: cari elemen pertandingan (sesuaikan selector sesuai HTML Naver)
+    for item in soup.select(".schedule_list li"):  # li = item pertandingan
+        title = item.select_one(".team_area").get_text(strip=True) if item.select_one(".team_area") else "Match"
+        time_str = item.select_one(".time").get_text(strip=True) if item.select_one(".time") else None
 
-        # default kosong
-        src = ""
-        # ambil link live kalau ada
-        onair = (
-            schedule.get("relayUrl")
-            or schedule.get("onAirPcUrl")
-            or schedule.get("broadcastUrl")
-        )
-        if onair:
-            src = onair
+        if not time_str:
+            continue
+
+        # Parsing tanggal & waktu (Naver biasanya pakai format "09.15 14:30")
+        try:
+            today = datetime.now()
+            dt = datetime.strptime(f"{today.year}.{time_str}", "%Y.%m.%d %H:%M")
+            dt = dt.replace(tzinfo=timezone(timedelta(hours=9)))  # KST (UTC+9)
+        except Exception as e:
+            print("Gagal parsing waktu:", e)
+            continue
+
+        # Placeholder src & poster (kosong kalau belum live)
+        src = ""  # nanti bisa diisi otomatis kalau sudah live
+        poster = "https://gameonx.my.id/assets/logotvgonx.png"
 
         matches.append({
             "title": title,
-            "start": start,
+            "start": dt.isoformat(),
             "src": src,
-            "poster": "assets/logotvgonx.png"
+            "poster": poster
         })
 
-# Simpan ke naver.json (overwrite otomatis)
-with open("naver.json", "w", encoding="utf-8") as f:
-    json.dump(matches, f, indent=2, ensure_ascii=False)
+    return matches
 
-print("✅ naver.json diperbarui:", len(matches), "pertandingan (hari ini + besok)")
+def save_json(matches):
+    """Simpan data ke naver.json"""
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(matches, f, ensure_ascii=False, indent=2)
+    print(f"✅ {OUTPUT_FILE} diperbarui: {len(matches)} pertandingan")
+
+if __name__ == "__main__":
+    try:
+        matches = fetch_matches()
+        save_json(matches)
+    except Exception as e:
+        print("❌ Error:", e)
