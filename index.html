@@ -1,157 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GAMEONX</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameOnX - Home</title>
+
+  <meta name="description" content="Tonton live streaming voli di GameOnX">
+  <meta property="og:title" content="GameOnX - Live Streaming">
+  <meta property="og:description" content="Tonton live streaming voli di GameOnX">
+  <meta property="og:image" content="https://gameonx.my.id/assets/bg mp.png">
+  <meta property="og:url" content="https://gameonx.my.id">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GameOnX - Live Streaming">
+  <meta name="twitter:description" content="Tonton live streaming voli di GameOnX">
+  <meta name="twitter:image" content="https://gameonx.my.id/assets/bg mp.png">
+  <meta name="twitter:url" content="https://gameonx.my.id">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="assets/site.webmanifest">
+  <link rel="stylesheet" href="assets/style.css">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .blink { animation: blink 1s infinite; }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { 
+      opacity: 0;
+      animation: fadeIn 0.8s ease-out forwards; 
+    }
+
+    .fade-in:nth-child(1) { animation-delay: 0.2s; }
+    .fade-in:nth-child(2) { animation-delay: 0.4s; }
+    .fade-in:nth-child(3) { animation-delay: 0.6s; }
+    .fade-in:nth-child(4) { animation-delay: 0.8s; }
+    
+    .channel-card {
+      background-image: url('assets/bg kartu.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      border: 1px solid #6b7280; 
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease-in-out, 
+                  box-shadow 0.3s ease-in-out, 
+                  border-color 0.3s ease-in-out;
+    }
+    .channel-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      border-color: transparent;
+    }
+
     body {
-      margin: 0;
-      font-family: Verdana, sans-serif;
-      background-color: #111;
-      color: #fff;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #1a1a1a;
-      padding: 10px 20px;
-      border-bottom: 1px solid #333;
-    }
-
-    .title {
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #00ff88;
-    }
-
-    .header-links a {
-      margin-left: 15px;
-      padding: 6px 12px;
-      border-radius: 5px;
-      background: #333;
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.9em;
-    }
-
-    .header-links a:hover {
-      background: #555;
-    }
-
-    .container {
-      display: grid;
-      gap: 10px;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      padding: 20px;
-    }
-
-    .card {
-      background: #1e1e1e;
-      color: #fff;
-      border: 1px solid #333;
-      border-radius: 8px;
-      overflow: hidden;
       position: relative;
-      transition: 0.2s;
+      background: url('assets/bg gameonx.jpg') no-repeat center top fixed;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #e5e7eb;
+      min-height: 100vh;
     }
-
-    .card:hover {
-      transform: scale(1.01);
-    }
-
-    .card img {
-      max-width: 100%;
-      height: auto;
-      border-bottom: 1px solid #333;
-    }
-
-    .card a {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      padding: 10px;
-    }
-
-    small {
-      color: #bbb;
-      display: block;
-      margin: 5px 0 10px;
-    }
-
-    .live-badge {
-      position: absolute;
-      top: 8px;
-      left: 8px;
-      background: red;
-      color: white;
-      padding: 2px 6px;
-      font-size: 0.75em;
-      border-radius: 4px;
-      font-weight: bold;
-      display: none;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55); 
+      z-index: -1;
     }
   </style>
 </head>
-<body>
-  <header>
-    <div class="title">GAMEONX</div>
-    <div class="header-links">
-      <a href="https://t.me/group-link" target="_blank">Join Grup</a>
-      <a href="https://saweria.co/donasi-link" target="_blank">Donasi</a>
+<body class="bg-black text-gray-200">
+
+  <header class="fixed top-0 left-0 w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-1 flex justify-between items-center">
+      <a href="index.html">
+       <img src="assets/logo11.png" alt="GameOnX" class="h-10 w-auto">
+      </a>
+      <nav class="hidden md:flex">
+        <a href="https://sociabuzz.com/fiqaz/donate" class="mx-2 text-white hover:text-blue-400 transition">Donate</a>
+        <a href="https://chat.whatsapp.com/FtSOKILls4HBAlnjEE5Del" class="mx-2 text-white hover:text-blue-400 transition">Grup Chat</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">☰</button>
+      <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-black bg-opacity-90 shadow-lg md:hidden">
+        <a href="https://sociabuzz.com/fiqaz/donate" class="block px-6 py-3 text-white hover:bg-gray-800 hover:text-blue-400">Donate</a>
+        <a href="https://chat.whatsapp.com/FtSOKILls4HBAlnjEE5Del" class="block px-6 py-3 text-white hover:bg-gray-800 hover:text-blue-400">Grup Chat</a>
+      </div>
     </div>
   </header>
 
-  <main>
-    <div class="container">
-      <div class="card" data-time="2025-07-11T17:20:00+07:00">
-        <span class="live-badge">LIVE</span>
-        <a href="https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/y29krLpD/live.isml/.m3u8" rel="noreferrer" target="_blank">
-          <img src="https://cdn.jwplayer.com/v2/media/y29krLpD/poster.jpg?width=320" alt="Poland vs Brazil | Week 3 | Women's VNL 2025" />
-          Poland vs Brazil | Week 3 | Women's VNL 2025
-          <br><small>Jum 11-07-2025 17:20 WIB</small>
-        </a>
-      </div>
-      <div class="card" data-time="2025-07-11T22:00:00+07:00">
-        <span class="live-badge">LIVE</span>
-      <a href="https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/ZDtvoomK/live.isml/.m3u8" rel="noreferrer" target="_blank">
-        <img src="https://cdn.jwplayer.com/v2/media/ZDtvoomK/poster.jpg?width=320" alt="Belgium vs Serbia | Week 3 | Women's VNL 2025">
-        Belgium vs Serbia | Week 3 | Women's VNL 2025
-          <br><small>Jum 11-07-2025 22:00 WIB</small><br>
-        </a>
-      </div>
-      <div class="card" data-time="2025-07-12T01:30:00+07:00">
-        <span class="live-badge">LIVE</span>
-        <a href="https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/tw5SpR52/live.isml/.m3u8" rel="noreferrer" target="_blank">
-          <img src="https://cdn.jwplayer.com/v2/media/tw5SpR52/poster.jpg?width=320" alt="Czechia vs Turkiye | Week 3 | Women's VNL 2025">
-          Czechia vs Turkiye | Week 3 | Women's VNL 2025
-          <br><small>Sab 12-07-2025 01:30 WIB</small></br>
-        </a>
-      </div>
-      <div class="card" data-time="2025-07-12T01:30:00+07:00">
-        
-        </a>
-      </div>
-          
-   </div> 
- </main>
+  <main class="max-w-7xl mx-auto px-6 pt-20 pb-20">
+    <h2 id="match-title" class="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-6 fade-in" style="animation-delay: 0s;">Pilih Kompetisi</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      
+      <a href="/LiveVoli" class="channel-card fade-in">
+        <h3 class="text-base font-semibold text-white">Live Event Volleyball Dunia<span class="blink text-red-500">●</span></h3>
+        <p class="text-gray-200 mt-1 text-xs">Event internasional dan live streaming.</p>
+      </a>
+      <a href="/VLeagueKorea" class="channel-card fade-in">
+        <h3 class="text-base font-semibold text-white">Voli Korea</h3>
+        <p class="text-gray-200 mt-1 text-xs">Jadwal dan live streaming pertandingan voli Korea.</p>
+      </a>
+      <a href="/SVLeagueJepang" class="channel-card fade-in">
+        <h3 class="text-base font-semibold text-white">Voli Jepang</h3>
+        <p class="text-gray-200 mt-1 text-xs">Nonton pertandingan voli Jepang secara langsung.</p>
+      </a>
+     
+    </div>
+  </main>
 
-
+  <footer class="fixed bottom-0 left-0 w-full z-50 bg-gray-900/80 backdrop-blur-md border-t border-gray-800 shadow-md">
+    <div class="px-6 py-2 text-center text-sm text-white">
+      © 2025 GameOnX - All Rights Reserved
+    </div>
+  </footer>
   <script>
-    // Script untuk menampilkan badge LIVE berdasarkan waktu lokal
-    document.querySelectorAll('.card').forEach(card => {
-      const timeAttr = card.getAttribute('data-time');
-      if (timeAttr) {
-        const matchTime = new Date(timeAttr);
-        const now = new Date();
-        const timeDiff = (now - matchTime) / 1000;
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
-        // Tampilkan LIVE jika pertandingan dimulai <= 10 menit yang lalu dan masih dalam 2 jam
-        if (timeDiff >= -600 && timeDiff <= 7200) {
-          card.querySelector('.live-badge').style.display = 'inline-block';
-        }
+    document.addEventListener("contextmenu", e => e.preventDefault());
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "F12") e.preventDefault();
+      if ((e.ctrlKey && e.shiftKey && 
+          (e.key === "I" || e.key === "J" || e.key === "C")) || 
+          (e.ctrlKey && e.key === "u")) {
+        e.preventDefault();
+      }
+    });
+    
+    window.addEventListener("pageshow", function (event) {
+      if (event.persisted) {
+        window.location.reload();
       }
     });
   </script>
