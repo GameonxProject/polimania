@@ -1,4 +1,5 @@
 // naver_update.js
+// naver_update.js
 const fs = require("fs");
 const puppeteer = require("puppeteer");
 
@@ -9,7 +10,6 @@ async function scrapeNaver() {
   });
 
   const page = await browser.newPage();
-
   const url = "https://sports.naver.com/volleyball/schedule/index";
   await page.goto(url, { waitUntil: "networkidle2" });
 
