@@ -1,9 +1,12 @@
-name: Update Naver JSON
+name: Update Naver Matches
 
 on:
   schedule:
-    - cron: "*/10 * * * *"   # jalan tiap 10 menit
-  workflow_dispatch:         # bisa juga dijalankan manual dari GitHub UI
+    - cron: "*/30 * * * *"   # jalan tiap 30 menit
+  workflow_dispatch:
+
+permissions:
+  contents: write   # wajib supaya bisa push ke repo
 
 jobs:
   update:
@@ -11,11 +14,13 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Install dependencies
         run: pip install requests
@@ -25,8 +30,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
+          git config --global user.email "action@github.com"
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add naver.json
           git commit -m "Auto update naver.json" || echo "No changes to commit"
-          git push
+          git push origin HEAD:${GITHUB_REF}
