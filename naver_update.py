@@ -1,62 +1,69 @@
-import requests
-import json
-from datetime import datetime, timedelta, timezone
-from bs4 import BeautifulSoup
+// naver_update.js
+const fs = require("fs");
+const puppeteer = require("puppeteer");
 
-# URL contoh jadwal voli di Naver Sports (ubah sesuai liga/event yang kamu mau)
-NAVER_URL = "https://sports.news.naver.com/volleyball/schedule/index"
+async function scrapeNaver() {
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  });
 
-# File output JSON
-OUTPUT_FILE = "naver.json"
+  const page = await browser.newPage();
 
-def fetch_matches():
-    """Ambil jadwal pertandingan dari Naver Sports"""
-    resp = requests.get(NAVER_URL, headers={"User-Agent": "Mozilla/5.0"})
-    resp.raise_for_status()
-    soup = BeautifulSoup(resp.text, "html.parser")
+  const url = "https://sports.naver.com/volleyball/schedule/index";
+  await page.goto(url, { waitUntil: "networkidle2" });
 
-    matches = []
-    now = datetime.now(timezone.utc)
+  const matches = await page.evaluate(() => {
+    const items = [];
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
 
-    # Contoh scraping: cari elemen pertandingan (sesuaikan selector sesuai HTML Naver)
-    for item in soup.select(".schedule_list li"):  # li = item pertandingan
-        title = item.select_one(".team_area").get_text(strip=True) if item.select_one(".team_area") else "Match"
-        time_str = item.select_one(".time").get_text(strip=True) if item.select_one(".time") else None
+    function formatDate(d) {
+      return d.toISOString().split("T")[0];
+    }
 
-        if not time_str:
-            continue
+    const validDates = [formatDate(today), formatDate(tomorrow)];
 
-        # Parsing tanggal & waktu (Naver biasanya pakai format "09.15 14:30")
-        try:
-            today = datetime.now()
-            dt = datetime.strptime(f"{today.year}.{time_str}", "%Y.%m.%d %H:%M")
-            dt = dt.replace(tzinfo=timezone(timedelta(hours=9)))  # KST (UTC+9)
-        except Exception as e:
-            print("Gagal parsing waktu:", e)
-            continue
+    document.querySelectorAll(".sch_tb tbody tr").forEach((row) => {
+      const dateCell = row.closest("table").querySelector("caption")?.innerText;
+      if (!dateCell) return;
 
-        # Placeholder src & poster (kosong kalau belum live)
-        src = ""  # nanti bisa diisi otomatis kalau sudah live
-        poster = "https://gameonx.my.id/assets/logotvgonx.png"
+      const dateMatch = dateCell.match(/(\d{4})\.(\d{2})\.(\d{2})/);
+      if (!dateMatch) return;
 
-        matches.append({
-            "title": title,
-            "start": dt.isoformat(),
-            "src": src,
-            "poster": poster
-        })
+      const matchDate = `${dateMatch[1]}-${dateMatch[2]}-${dateMatch[3]}`;
+      if (!validDates.includes(matchDate)) return;
 
-    return matches
+      const time = row.querySelector(".time")?.innerText.trim();
+      const teams = row.querySelector(".team")?.innerText.trim();
+      const title = teams || "Pertandingan Voli";
 
-def save_json(matches):
-    """Simpan data ke naver.json"""
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(matches, f, ensure_ascii=False, indent=2)
-    print(f"✅ {OUTPUT_FILE} diperbarui: {len(matches)} pertandingan")
+      let startISO = "";
+      if (time) {
+        const [hh, mm] = time.split(":");
+        const dt = new Date(`${matchDate}T${hh}:${mm}:00+09:00`);
+        startISO = dt.toISOString();
+      }
 
-if __name__ == "__main__":
-    try:
-        matches = fetch_matches()
-        save_json(matches)
-    except Exception as e:
-        print("❌ Error:", e)
+      items.push({
+        title,
+        start: startISO,
+        src: "",
+        poster: "assets/logotvgonx.png",
+      });
+    });
+
+    return items;
+  });
+
+  await browser.close();
+
+  fs.writeFileSync("naver.json", JSON.stringify(matches, null, 2), "utf-8");
+  console.log(`✅ naver.json diperbarui: ${matches.length} pertandingan`);
+}
+
+scrapeNaver().catch((err) => {
+  console.error("❌ Error scraping:", err);
+  process.exit(1);
+});
