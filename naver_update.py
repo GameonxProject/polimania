@@ -1,5 +1,4 @@
 // naver_update.js
-// naver_update.js
 const fs = require("fs");
 const puppeteer = require("puppeteer");
 
