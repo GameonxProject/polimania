@@ -17,17 +17,15 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/setup-node@v3
         with:
-          python-version: "3.x"
+          node-version: 18
 
-      - name: Install dependencies
-        run: |
-          pip install requests beautifulsoup4
+      - name: Install Puppeteer
+        run: npm install puppeteer
 
       - name: Run update script
-        run: python naver_update.py
+        run: node naver_update.js
 
       - name: Commit and push changes
         run: |
