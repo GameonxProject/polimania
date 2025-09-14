@@ -2,11 +2,11 @@ name: Update Naver Matches
 
 on:
   schedule:
-    - cron: "*/30 * * * *"   # jalan tiap 30 menit
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 permissions:
-  contents: write   # wajib supaya bisa push ke repo
+  contents: write
 
 jobs:
   update:
@@ -23,7 +23,8 @@ jobs:
           python-version: "3.x"
 
       - name: Install dependencies
-        run: pip install requests
+        run: |
+          pip install requests beautifulsoup4
 
       - name: Run update script
         run: python naver_update.py
