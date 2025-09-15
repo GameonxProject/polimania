@@ -3,140 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GameOnX - Live Voli Dunia</title>
-  <meta name="description" content="Tonton live streaming voli di GameOnX">
-
-  <meta property="og:title" content="GameOnX - Live Streaming">
-  <meta property="og:description" content="Tonton live streaming voli di GameOnX">
-  <meta property="og:image" content="https://gameonx.my.id/assets/bg mp.png">
-  <meta property="og:url" content="https://gameonx.my.id">
-  <meta property="og:type" content="website">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="GameOnX - Live Streaming">
-  <meta name="twitter:description" content="Tonton live streaming voli di GameOnX">
-  <meta name="twitter:image" content="https://gameonx.my.id/assets/bg mp.png">
-  <meta name="twitter:url" content="https://gameonx.my.id">
-
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  <link rel="manifest" href="assets/site.webmanifest">
-  <link rel="stylesheet" href="assets/style.css">
-
+  <title>GameOnX - Jadwal Live</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @keyframes blink {0%,100%{opacity:1;}50%{opacity:0;}}
-    .blink {animation: blink 1s infinite;}
-    @keyframes fadeIn {0%{opacity:0;transform:translateY(20px);}100%{opacity:1;transform:translateY(0);}}
-    .fade-in {animation: fadeIn 0.8s ease-out forwards;}
-    .poster-container {position:relative;overflow:hidden;border-radius:0.4rem;}
-    .poster {aspect-ratio:16/9;object-fit:cover;width:100%;height:auto;transition:transform .3s ease,filter .3s ease;}
-    .channel-card {background-image:url('/assets/bg kartu.jpg');background-size:cover;background-position:center;transition:transform .3s ease,box-shadow .3s ease;}
-    .channel-card:hover {transform:translateY(-5px) scale(1.03);box-shadow:0 8px 20px rgba(0,0,0,0.6);}
-    body {background:url('/assets/bg gameonx.jpg') no-repeat center center fixed;background-size:cover;min-height:100vh;color:#e5e7eb;}
-    body::before {content:"";position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:-1;}
-    .progress-bar {height:4px;border-radius:4px;overflow:hidden;margin-top:6px;}
-    .progress-fill {height:100%;width:0%;transition:width 1s linear;}
+    .blink{animation:blink 1s infinite;}
+    .card {background:#111;border-radius:8px;overflow:hidden;transition:.3s;}
+    .card:hover{transform:translateY(-5px) scale(1.03);box-shadow:0 6px 15px rgba(0,0,0,.6);}
+    .poster{width:100%;aspect-ratio:16/9;object-fit:cover;}
+    .progress-bar{height:4px;border-radius:4px;overflow:hidden;margin-top:6px;}
+    .progress-fill{height:100%;width:0%;transition:width 1s linear;}
   </style>
 </head>
 <body class="bg-black text-gray-200">
 
-  <header class="fixed top-0 left-0 w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800 shadow-md">
-    <div class="max-w-7xl mx-auto px-6 py-1 flex justify-between items-center">
-      <a href="https://gameonx.my.id"><img src="/assets/logo11.png" alt="GameOnX" class="h-10 w-auto"></a>
-      <nav class="hidden md:flex">
-        <a href="https://gameonx.my.id" class="mx-2 text-white hover:text-blue-400">Home</a>
-        <a href="https://sociabuzz.com/fiqaz/donate" class="mx-2 text-white hover:text-blue-400">Donate</a>
-        <a href="https://chat.whatsapp.com/FtSOKILls4HBAlnjEE5Del" class="mx-2 text-white hover:text-blue-400">Grup Chat</a>
-      </nav>
-      <button id="menu-btn" class="md:hidden text-2xl">☰</button>
-      <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-black bg-opacity-90 shadow-lg md:hidden">
-        <a href="https://gameonx.my.id" class="block px-6 py-3 text-white hover:bg-gray-800">Home</a>
-        <a href="https://sociabuzz.com/fiqaz/donate" class="block px-6 py-3 text-white hover:bg-gray-800">Donate</a>
-        <a href="https://chat.whatsapp.com/FtSOKILls4HBAlnjEE5Del" class="block px-6 py-3 text-white hover:bg-gray-800">Grup Chat</a>
-      </div>
-    </div>
-  </header>
-
-  <main class="max-w-7xl mx-auto px-6 pt-20 pb-20">
-    <h2 class="text-xl font-bold text-white mb-6">Volleyball World - Jadwal & Live</h2>
-    <div id="channel-list" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+  <main class="max-w-6xl mx-auto px-4 pt-6 pb-20">
+    <h2 class="text-xl font-bold text-white mb-6">Jadwal Volleyball</h2>
+    <div id="channel-list" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
   </main>
 
-  <footer class="fixed bottom-0 left-0 w-full z-50 bg-gray-900/80 backdrop-blur-md border-t border-gray-800 shadow-md">
-    <div class="px-6 py-2 text-center text-sm text-white">© 2025 GameOnX - All Rights Reserved</div>
-  </footer>
-
   <script>
-    const menuBtn=document.getElementById('menu-btn');
-    const mobileMenu=document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
+    async function loadSchedule(){
+      const container=document.getElementById("channel-list");
+      container.innerHTML="<div class='col-span-full text-center text-gray-400'>Loading...</div>";
 
-    async function loadChannels(){
-      const container=document.getElementById('channel-list');
-      const response = await fetch('volleyballworld.json'); // karena JSON ada di root
-      let data=await response.json();
+      try{
+        const res=await fetch("https://halu.serv00.net/poli.php");
+        const html=await res.text();
+        const doc=new DOMParser().parseFromString(html,"text/html");
 
-      // fix url otomatis
-      data=data.map(ch=>{
-        if(ch.src.includes("/fM9jRrkN/")) ch.src=ch.src.replace("/fM9jRrkN/","/fM9jRrkn/");
-        if(ch.src.includes("width=320")) ch.src=ch.src.replace("width=320","width=1920");
-        return ch;
-      });
+        const cards=[...doc.querySelectorAll(".card")].map(c=>{
+          const a=c.querySelector("a");
+          const img=c.querySelector("img");
+          const small=c.querySelector("small");
 
-      const now=new Date();
-      data.sort((a,b)=>new Date(a.start)-new Date(b.start));
+          let src=a?.href||"";
+          let poster=img?.src||"";
+          const title=img?.alt||a?.innerText||"";
+          const timeText=small?.innerText||"";
 
-      const hari=["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
-      const offset=new Date().getTimezoneOffset()/-60;
-      let zone="WIB"; if(offset===9)zone="WIT"; else if(offset===8)zone="WITA";
-      container.innerHTML="";
+          // fix url otomatis
+          src=src.replace("/fM9jRrkN/","/fM9jRrkn/");
+          poster=poster.replace("width=320","width=1920");
 
-      data.forEach((ch,i)=>{
-        const start=new Date(ch.start);
-        const isLive=now>=start;
-        const selisih=Math.floor((start-now)/60000); // menit
-        let statusHTML="";
-        let barColor="bg-green-500";
+          return {title,src,poster,timeText};
+        });
 
-        if(isLive){
-          statusHTML=`<span class="text-red-400 font-bold blink">🔴 LIVE</span>`;
-          barColor="bg-red-600";
-        }else{
-          if(selisih>30) barColor="bg-green-500";
-          else if(selisih>10) barColor="bg-yellow-400";
-          else barColor="bg-red-500";
+        container.innerHTML="";
+        const now=new Date();
 
-          statusHTML=`<span class="text-gray-200">UPCOMING • mulai dalam ${selisih} menit</span>`;
-        }
+        cards.forEach((ch,i)=>{
+          // parse tanggal WIB → Date object
+          let start=null;
+          const match=ch.timeText.match(/(\d{2})-(\d{2})-(\d{4}) (\d{2}):(\d{2})/);
+          if(match){
+            const [_,d,m,y,h,min]=match.map(Number);
+            // WIB = UTC+7
+            start=new Date(Date.UTC(y,m-1,d,h-7,min));
+          }
 
-        const progress=Math.min(100,Math.max(0,((now-start+3600000)/3600000)*100));
+          let statusHTML="";
+          let barColor="bg-green-500";
+          let progress=0;
+          if(start){
+            const selisih=(start-now)/60000;
+            if(now>=start){
+              statusHTML=`<span class="text-red-400 font-bold blink">🔴 LIVE</span>`;
+              barColor="bg-red-600";
+              progress=100;
+            }else{
+              statusHTML=`<span class="text-gray-200">UPCOMING • ${Math.round(selisih)} menit lagi</span>`;
+              if(selisih<=30) barColor="bg-red-500";
+              else if(selisih<=60) barColor="bg-yellow-400";
+              else barColor="bg-green-500";
+              progress=Math.max(0,100-(selisih/60*100));
+            }
+          }
 
-        container.innerHTML+=`
-        <a href="/watch?url=${encodeURIComponent(ch.src)}&title=${encodeURIComponent(ch.title)}" 
-          class="channel-card bg-slate-900 p-2 rounded-md shadow-lg ring-1 ${isLive?'ring-red-500':'ring-gray-500'} fade-in"
-          style="animation-delay:${i*0.1}s;">
-          <div class="poster-container"><img src="${ch.poster}" alt="${ch.title}" class="poster rounded-md"></div>
-          <div class="mt-3 flex flex-col">
-            <h3 class="text-sm font-semibold text-white">${ch.title}</h3>
-            <div class="mt-2">${statusHTML}</div>
-            <div class="progress-bar bg-gray-700 mt-2"><div class="progress-fill ${barColor}" style="width:${isLive?'100%':progress+'%'}"></div></div>
-          </div>
-        </a>`;
-      });
+          container.innerHTML+=`
+            <a href="/watch?url=${encodeURIComponent(ch.src)}&title=${encodeURIComponent(ch.title)}" 
+              class="card p-2 ring-1 ${statusHTML.includes("LIVE")?'ring-red-500':'ring-gray-600'} fade-in"
+              style="animation-delay:${i*0.1}s">
+              <img src="${ch.poster}" class="poster">
+              <div class="mt-2">
+                <h3 class="text-sm font-semibold">${ch.title}</h3>
+                <div class="text-xs mt-1">${ch.timeText}</div>
+                <div class="mt-1">${statusHTML}</div>
+                <div class="progress-bar bg-gray-700 mt-1">
+                  <div class="progress-fill ${barColor}" style="width:${progress}%"></div>
+                </div>
+              </div>
+            </a>`;
+        });
+
+      }catch(e){
+        container.innerHTML="<div class='col-span-full text-center text-red-400'>Gagal memuat jadwal</div>";
+        console.error(e);
+      }
     }
 
-    loadChannels();
-    setInterval(loadChannels,30000);
-
-    document.addEventListener("contextmenu",e=>e.preventDefault());
-    document.addEventListener("keydown",e=>{
-      if(e.key==="F12")e.preventDefault();
-      if((e.ctrlKey&&e.shiftKey&&(e.key==="I"||e.key==="J"||e.key==="C"))||(e.ctrlKey&&e.key==="u"))e.preventDefault();
-    });
+    loadSchedule();
+    setInterval(loadSchedule,60000);
   </script>
 </body>
 </html>
-
