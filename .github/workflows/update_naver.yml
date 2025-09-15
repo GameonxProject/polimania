@@ -1,29 +1,38 @@
-name: Update Naver JSON
+name: Update Naver Schedule
 
 on:
   schedule:
-    - cron: "0 * * * *" # jalan tiap jam
-  workflow_dispatch: # bisa manual dari GitHub Actions tab
+    - cron: "0 * * * *"   # jalan tiap jam
+  workflow_dispatch:       # bisa dijalankan manual juga
 
 jobs:
-  update-naver:
+  update:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Repo
+      - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: 18
 
-      - name: Install dependencies
+      - name: Install Puppeteer
         run: npm install puppeteer
 
-      - name: Run Puppeteer Scraper
+      - name: Debug check file
+        run: |
+          echo "=== Head of naver_update.js ==="
+          head -n 10 naver_update.js
+          echo "==============================="
+
+      - name: Run scraper
         run: node naver_update.js
 
-      - name: Commit & Push changes
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "action@github.com"
