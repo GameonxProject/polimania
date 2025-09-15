@@ -76,7 +76,7 @@
 
     async function loadChannels(){
       const container=document.getElementById('channel-list');
-      const response=await fetch('../volleyballworld.json');
+      const response = await fetch('volleyballworld.json'); // karena JSON ada di root
       let data=await response.json();
 
       // fix url otomatis
