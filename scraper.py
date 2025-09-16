@@ -1,31 +1,48 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
 URL = "https://halu.serv00.net/poli.php"
 OUTPUT = "volleyballworld.json"
 
+# Map zona text dari sumber ke offset
+ZONE_OFFSET = {
+    "WIB": 7,
+    "WITA": 8,
+    "WIT": 9
+}
+
 def parse_start(start_text):
-    """Convert jadwal ke ISO 8601 (YYYY-MM-DDTHH:MM:SS) untuk JS"""
+    """Convert jadwal ke ISO 8601 dengan offset sehingga JS bisa parse"""
     start_text = start_text.strip()
     if "LIVE" in start_text.upper():
-        # LIVE pakai waktu sekarang UTC
-        return datetime.utcnow().isoformat()
-    else:
-        # Hapus nama hari dan zona jika ada
-        for z in ["WIB", "WITA", "WIT"]:
+        # LIVE pakai UTC sekarang
+        return datetime.utcnow().replace(tzinfo=timezone.utc).isoformat()
+    
+    # Tentukan offset berdasarkan WIB/WITA/WIT
+    tz_hours = 7  # default WIB
+    for z, h in ZONE_OFFSET.items():
+        if z in start_text:
+            tz_hours = h
             start_text = start_text.replace(z, "").strip()
-        # Hapus nama hari (misal "Sel 16-09-2025 20:00" → "16-09-2025 20:00")
-        if len(start_text.split()) > 1 and '-' in start_text.split()[0]:
-            pass  # sudah format "16-09-2025 20:00"
-        else:
-            start_text = ' '.join(start_text.split()[1:])  # buang nama hari
-        try:
-            dt = datetime.strptime(start_text, "%d-%m-%Y %H:%M")
-            return dt.isoformat()
-        except ValueError:
-            return start_text  # fallback
+            break
+
+    # Hapus nama hari (misal "Sel 16-09-2025 20:00" → "16-09-2025 20:00")
+    parts = start_text.split()
+    if len(parts) > 1 and '-' in parts[0]:
+        date_str = start_text  # sudah benar
+    else:
+        date_str = ' '.join(parts[1:])
+
+    try:
+        dt = datetime.strptime(date_str, "%d-%m-%Y %H:%M")
+        tz = timezone(timedelta(hours=tz_hours))
+        dt = dt.replace(tzinfo=tz)
+        return dt.isoformat()
+    except ValueError:
+        # fallback jika parsing gagal
+        return start_text
 
 def scrape():
     print(f"[INFO] Fetching {URL} ...")
