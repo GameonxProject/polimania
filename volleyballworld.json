@@ -1,11 +1,5 @@
 [
   {
-    "title": "France vs Finland | Pool C | Men’s World Championship Philippines 2025",
-    "start": "2025-09-16T12:24:16.559912",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/sf50QHFX/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/sf50QHFX/poster.jpg?width=1920"
-  },
-  {
     "title": "Serbia vs China | Pool H | Men’s World Championship Philippines 2025",
     "start": "Sel 16-09-2025 20:00 WIB",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/N5SLXwun/live.isml/.m3u8",
@@ -118,5 +112,11 @@
     "start": "Kam 18-09-2025 16:30 WIB",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/wcoNBO49/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/wcoNBO49/poster.jpg?width=1920"
+  },
+  {
+    "title": "France vs Argentina | Pool C | Men’s World Championship Philippines 2025",
+    "start": "Kam 18-09-2025 17:00 WIB",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/hYRyvy7y/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/hYRyvy7y/poster.jpg?width=1920"
   }
 ]
