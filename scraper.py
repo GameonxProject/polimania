@@ -13,18 +13,32 @@ def scrape():
     soup = BeautifulSoup(r.text, "html.parser")
 
     jadwal = []
-    cards = soup.find_all("div", class_="card")  # sesuaikan class sesuai sumber
-    for card in cards:
-        title = card.find("h3").get_text(strip=True) if card.find("h3") else "No title"
-        src = card.find("a")["href"] if card.find("a") else ""
-        poster = card.find("img")["src"] if card.find("img") else ""
-        start = card.get("data-start") or datetime.utcnow().isoformat()
+    for card in soup.select("div.card"):
+        a = card.find("a")
+        img = card.find("img")
+        small = card.find("small")
 
-        # Fix otomatis path dan resolusi
+        # Title ambil dari alt atau text <a>
+        title = img["alt"].strip() if img and img.has_attr("alt") else a.get_text(strip=True)
+
+        # Link m3u8
+        src = a["href"].strip() if a and a.has_attr("href") else ""
+
+        # Poster
+        poster = img["src"].strip() if img and img.has_attr("src") else ""
+
+        # Jadwal atau status LIVE
+        start_text = small.get_text(strip=True) if small else ""
+        if "LIVE" in start_text.upper():
+            start = datetime.utcnow().isoformat()  # kalau LIVE pakai waktu sekarang
+        else:
+            start = start_text
+
+        # 🔧 Perbaikan otomatis
         if "/fM9jRrkN/" in src:
             src = src.replace("/fM9jRrkN/", "/fM9jRrkn/")
-        if "width=320" in src:
-            src = src.replace("width=320", "width=1920")
+        if "width=320" in poster:
+            poster = poster.replace("width=320", "width=1920")
 
         jadwal.append({
             "title": title,
@@ -33,6 +47,7 @@ def scrape():
             "poster": poster
         })
 
+    # Simpan JSON baru → overwrite (biar kalau sumber hapus, JSON juga ikut hapus)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(jadwal, f, indent=2, ensure_ascii=False)
 
