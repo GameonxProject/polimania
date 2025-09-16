@@ -1,43 +1,42 @@
 import requests
 from bs4 import BeautifulSoup
 import json
+from datetime import datetime
 
 URL = "https://halu.serv00.net/poli.php"
 OUTPUT = "volleyballworld.json"
 
 def scrape():
-    res = requests.get(URL)
-    res.raise_for_status()
-    soup = BeautifulSoup(res.text, "html.parser")
+    print(f"[INFO] Fetching {URL} ...")
+    r = requests.get(URL, timeout=10)
+    r.raise_for_status()
+    soup = BeautifulSoup(r.text, "html.parser")
 
-    matches = []
-    cards = soup.select(".card")
+    jadwal = []
+    cards = soup.find_all("div", class_="card")  # sesuaikan class sesuai sumber
     for card in cards:
-        a = card.find("a")
-        img = card.find("img")
-        small = card.find("small")
+        title = card.find("h3").get_text(strip=True) if card.find("h3") else "No title"
+        src = card.find("a")["href"] if card.find("a") else ""
+        poster = card.find("img")["src"] if card.find("img") else ""
+        start = card.get("data-start") or datetime.utcnow().isoformat()
 
-        if not (a and img and small):
-            continue
+        # Fix otomatis path dan resolusi
+        if "/fM9jRrkN/" in src:
+            src = src.replace("/fM9jRrkN/", "/fM9jRrkn/")
+        if "width=320" in src:
+            src = src.replace("width=320", "width=1920")
 
-        src = a["href"].replace("/fM9jRrkN/", "/fM9jRrkn/")
-        poster = img["src"].replace("width=320", "width=1920")
-        title = img.get("alt", "").strip()
-        start = small.get_text(strip=True)
-
-        match = {
+        jadwal.append({
             "title": title,
             "start": start,
             "src": src,
             "poster": poster
-        }
-        matches.append(match)
+        })
 
-    # Simpan JSON
     with open(OUTPUT, "w", encoding="utf-8") as f:
-        json.dump(matches, f, ensure_ascii=False, indent=2)
+        json.dump(jadwal, f, indent=2, ensure_ascii=False)
 
-    print(f"[OK] {len(matches)} jadwal tersimpan ke {OUTPUT}")
+    print(f"[OK] {len(jadwal)} jadwal tersimpan ke {OUTPUT}")
 
 if __name__ == "__main__":
     scrape()
