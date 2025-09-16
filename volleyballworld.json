@@ -1,15 +1,9 @@
 [
   {
     "title": "Iran vs Tunisia | Pool A | Men’s World Championship Philippines 2025",
-    "start": "2025-09-16T07:12:42.635165",
+    "start": "2025-09-16T07:35:53.363961",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/qi8ohe6l/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/qi8ohe6l/poster.jpg?width=1920"
-  },
-  {
-    "title": "Ukraine vs Algeria | Pool F | Men’s World Championship Philippines 2025",
-    "start": "2025-09-16T07:12:42.635274",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/UODxwRQ8/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/UODxwRQ8/poster.jpg?width=1920"
   },
   {
     "title": "Philippines vs Egypt | Pool A | Men’s World Championship Philippines 2025",
@@ -118,5 +112,11 @@
     "start": "Kam 18-09-2025 09:30 WIB",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/xxdL9n3r/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/xxdL9n3r/poster.jpg?width=1920"
+  },
+  {
+    "title": "Egypt vs Tunisia | Pool A | Men’s World Championship Philippines 2025",
+    "start": "Kam 18-09-2025 12:30 WIB",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/gZv4D4uf/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/gZv4D4uf/poster.jpg?width=1920"
   }
 ]
