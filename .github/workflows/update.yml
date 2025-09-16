@@ -2,7 +2,7 @@ name: Update volleyballworld.json
 
 on:
   schedule:
-    - cron: "*/30 * * * *"   # jalan tiap 30 menit
+    - cron: "*/10 * * * *"   # jalan tiap 30 menit
   workflow_dispatch:
 
 permissions:
