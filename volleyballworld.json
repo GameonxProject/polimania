@@ -1,13 +1,7 @@
 [
   {
-    "title": "Brazil vs Czechia | Pool H | Men’s World Championship Philippines 2025",
-    "start": "2025-09-16T03:32:46.409627",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/h4VG4RhL/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/h4VG4RhL/poster.jpg?width=1920"
-  },
-  {
     "title": "Argentina vs Korea | Pool C | Men’s World Championship Philippines 2025",
-    "start": "2025-09-16T03:32:46.409720",
+    "start": "2025-09-16T03:43:51.174127",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/Y4HOba44/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/Y4HOba44/poster.jpg?width=1920"
   },
@@ -118,5 +112,11 @@
     "start": "Kam 18-09-2025 01:00 WIB",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/S03BwFl1/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/S03BwFl1/poster.jpg?width=1920"
+  },
+  {
+    "title": "Brazil vs Serbia | Pool H | Men’s World Championship Philippines 2025",
+    "start": "Kam 18-09-2025 09:00 WIB",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/DHBmkcZ0/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/DHBmkcZ0/poster.jpg?width=1920"
   }
 ]
