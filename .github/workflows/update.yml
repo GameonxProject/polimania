@@ -1,9 +1,12 @@
-name: Update VolleyballWorld JSON
+name: Update volleyballworld.json
 
 on:
   schedule:
-    - cron: "*/10 * * * *" # jalan tiap 10 menit
-  workflow_dispatch:       # bisa dijalankan manual juga
+    - cron: "*/30 * * * *"   # jalan tiap 30 menit
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update-json:
@@ -11,10 +14,10 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
@@ -22,14 +25,17 @@ jobs:
         run: pip install requests beautifulsoup4
 
       - name: Run scraper
-        run: python volleyballworld/scraper.py
+        run: python scraper.py
 
-      - name: Commit and push changes
+      - name: Commit and Push changes
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add volleyballworld.json
           git commit -m "Auto update volleyballworld.json" || echo "No changes to commit"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Trigger Vercel Deployment
+        run: |
+          curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_xxxxx?buildCache=false" \
+          -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}"
