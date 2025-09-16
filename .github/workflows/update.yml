@@ -3,7 +3,7 @@ name: Update volleyballworld.json
 on:
   schedule:
     - cron: "*/30 * * * *"   # jalan tiap 30 menit
-  workflow_dispatch:         # bisa juga manual dari tab Actions
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -34,3 +34,8 @@ jobs:
           git add volleyballworld.json
           git commit -m "Auto update volleyballworld.json" || echo "No changes to commit"
           git push
+
+      - name: Trigger Vercel Deployment
+        run: |
+          curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_xxxxx?buildCache=false" \
+          -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}"
