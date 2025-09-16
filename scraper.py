@@ -7,22 +7,25 @@ URL = "https://halu.serv00.net/poli.php"
 OUTPUT = "volleyballworld.json"
 
 def parse_start(start_text):
-    """Parse jadwal menjadi ISO 8601 yang dikenali JS"""
+    """Convert jadwal ke ISO 8601 (YYYY-MM-DDTHH:MM:SS) untuk JS"""
     start_text = start_text.strip()
     if "LIVE" in start_text.upper():
         # LIVE pakai waktu sekarang UTC
         return datetime.utcnow().isoformat()
     else:
-        # Hapus label WIB/WITA/WIT
+        # Hapus nama hari dan zona jika ada
         for z in ["WIB", "WITA", "WIT"]:
             start_text = start_text.replace(z, "").strip()
+        # Hapus nama hari (misal "Sel 16-09-2025 20:00" → "16-09-2025 20:00")
+        if len(start_text.split()) > 1 and '-' in start_text.split()[0]:
+            pass  # sudah format "16-09-2025 20:00"
+        else:
+            start_text = ' '.join(start_text.split()[1:])  # buang nama hari
         try:
-            # Format dari sumber: "Sel 16-09-2025 12:30"
-            dt = datetime.strptime(start_text, "%a %d-%m-%Y %H:%M")
-            return dt.isoformat()  # ISO 8601
+            dt = datetime.strptime(start_text, "%d-%m-%Y %H:%M")
+            return dt.isoformat()
         except ValueError:
-            # fallback jika parsing gagal, tetap string
-            return start_text
+            return start_text  # fallback
 
 def scrape():
     print(f"[INFO] Fetching {URL} ...")
