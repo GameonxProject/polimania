@@ -1,13 +1,7 @@
 [
   {
-    "title": "Bulgaria vs Chile | Pool E | Men’s World Championship Philippines 2025",
-    "start": "2025-09-17T06:48:20.849061+00:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/0c8sYABT/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/0c8sYABT/poster.jpg?width=1920"
-  },
-  {
     "title": "Canada vs Turkiye | Pool G | Men’s World Championship Philippines 2025",
-    "start": "2025-09-17T06:48:20.849183+00:00",
+    "start": "2025-09-17T07:15:18.011856+00:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/Ivq4AvZC/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/Ivq4AvZC/poster.jpg?width=1920"
   },
@@ -118,5 +112,11 @@
     "start": "2025-09-18T20:30:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/vZDlv97p/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/vZDlv97p/poster.jpg?width=1920"
+  },
+  {
+    "title": "Main Draw Day 3 | Court 2 | Elite 16 João Pessoa 2025",
+    "start": "2025-09-19T19:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/TQudKMl8/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/TQudKMl8/poster.jpg?width=1920"
   }
 ]
