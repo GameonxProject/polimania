@@ -1,19 +1,13 @@
 [
   {
-    "title": "Poland vs Netherlands | Pool B | Men’s World Championship Philippines 2025",
-    "start": "2025-09-17T11:49:50.685875+00:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/YXBL6hX6/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/YXBL6hX6/poster.jpg?width=1920"
-  },
-  {
     "title": "Qualification | Court 2 | Elite 16 João Pessoa 2025",
-    "start": "2025-09-17T11:49:50.686000+00:00",
+    "start": "2025-09-17T12:32:27.021665+00:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/8pz5HSZy/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/8pz5HSZy/poster.jpg?width=1920"
   },
   {
     "title": "Qualification | Central Court | Elite 16 João Pessoa 2025",
-    "start": "2025-09-17T11:49:50.686080+00:00",
+    "start": "2025-09-17T12:32:27.021759+00:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/GjfGaXL1/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/GjfGaXL1/poster.jpg?width=1920"
   },
@@ -118,5 +112,11 @@
     "start": "2025-09-21T04:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/RQGBCyKO/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/RQGBCyKO/poster.jpg?width=1920"
+  },
+  {
+    "title": "TBC v TBC | Quarter Final (W) | João Pessoa 2025",
+    "start": "2025-09-21T04:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/Evh0mcie/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/Evh0mcie/poster.jpg?width=1920"
   }
 ]
