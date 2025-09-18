@@ -1,25 +1,19 @@
 [
   {
-    "title": "Thamela/Victoria (BRA) v Flavia Moura/Barbara (BRA) | Main Draw | João Pessoa 2025",
-    "start": "2025-09-18T14:16:03.122879+00:00",
+    "title": "Taiana Lima/Talita (BRA) v Paulikiene/Raupelyte (LTU) | Main Draw | João Pessoa 2025",
+    "start": "2025-09-18T14:40:44.466788+00:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/gV2o4Xj2/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/gV2o4Xj2/poster.jpg?width=1920"
   },
   {
     "title": "Dani/Tania (ESP) v Donlin/Denaburg (USA) | Main Draw | João Pessoa 2025",
-    "start": "2025-09-18T14:16:03.123009+00:00",
+    "start": "2025-09-18T14:40:44.466903+00:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/WW58dpQf/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/WW58dpQf/poster.jpg?width=1920"
   },
   {
-    "title": "Czechia vs China | Pool H | Men’s World Championship Philippines 2025",
-    "start": "2025-09-18T14:16:03.123072+00:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/N9Qw4cS6/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/N9Qw4cS6/poster.jpg?width=1920"
-  },
-  {
     "title": "Italy vs Ukraine | Pool F | Men’s World Championship Philippines 2025",
-    "start": "2025-09-18T14:16:03.123115+00:00",
+    "start": "2025-09-18T14:40:44.466988+00:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/vZDlv97p/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/vZDlv97p/poster.jpg?width=1920"
   },
@@ -118,5 +112,11 @@
     "start": "2025-09-21T19:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/ZKFIcsJ5/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/ZKFIcsJ5/poster.jpg?width=1920"
+  },
+  {
+    "title": "Semifinals Day 5 | Central Court | Elite 16 João Pessoa 2025",
+    "start": "2025-09-21T19:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/6IZojjzy/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/6IZojjzy/poster.jpg?width=1920"
   }
 ]
