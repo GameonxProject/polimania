@@ -1,17 +1,5 @@
 [
   {
-    "title": "Åhman/Hellvig (SWE) v Bassereau/Aye, C. (FRA) | Main Draw | João Pessoa 2025",
-    "start": "2025-09-17T23:49:29.646927+00:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/5zjHVpY2/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/5zjHVpY2/poster.jpg?width=1920"
-  },
-  {
-    "title": "Schalk/Shaw (USA) v George/Saymon (BRA) | Main Draw | João Pessoa 2025",
-    "start": "2025-09-17T23:49:29.647022+00:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/S03BwFl1/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/S03BwFl1/poster.jpg?width=1920"
-  },
-  {
     "title": "Brazil vs Serbia | Pool H | Men’s World Championship Philippines 2025",
     "start": "2025-09-18T09:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/DHBmkcZ0/live.isml/.m3u8",
@@ -118,5 +106,17 @@
     "start": "2025-09-20T19:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/46VwPa8S/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/46VwPa8S/poster.jpg?width=1920"
+  },
+  {
+    "title": "TBC v TBC | Quarter Final (M) | João Pessoa 2025",
+    "start": "2025-09-21T02:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/cSLluoLd/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/cSLluoLd/poster.jpg?width=1920"
+  },
+  {
+    "title": "TBC v TBC | Quarter Final (M) | João Pessoa 2025",
+    "start": "2025-09-21T02:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/xKgDvOOo/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/xKgDvOOo/poster.jpg?width=1920"
   }
 ]
