@@ -1,17 +1,5 @@
 [
   {
-    "title": "Evandro/Arthur Lanci (BRA) v Plavins/Fokerots (LAT) | Main Draw | João Pessoa 2025",
-    "start": "2025-09-18T23:49:31.585995+00:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/gV2o4Xj2/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/gV2o4Xj2/poster.jpg?width=1920"
-  },
-  {
-    "title": "Mol, A./Sørum, C. (NOR) v Krattiger/Dillier (SUI) | Main Draw | João Pessoa 2025",
-    "start": "2025-09-18T23:49:31.586095+00:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/WW58dpQf/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/WW58dpQf/poster.jpg?width=1920"
-  },
-  {
     "title": "Main Draw Day 3 | Court 2 | Elite 16 João Pessoa 2025",
     "start": "2025-09-19T19:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/TQudKMl8/live.isml/.m3u8",
@@ -118,5 +106,17 @@
     "start": "2025-09-21T20:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/WBrIjIlf/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/WBrIjIlf/poster.jpg?width=1920"
+  },
+  {
+    "title": "TBC v TBC | Semi-Final (W) | João Pessoa 2025",
+    "start": "2025-09-21T21:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/chXpoZtm/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/chXpoZtm/poster.jpg?width=1920"
+  },
+  {
+    "title": "TBC v TBC | Semi-Final (W) | João Pessoa 2025",
+    "start": "2025-09-21T22:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/zVByyFD7/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/zVByyFD7/poster.jpg?width=1920"
   }
 ]
