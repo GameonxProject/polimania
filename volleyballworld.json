@@ -1,21 +1,15 @@
 [
   {
     "title": "Carol/Rebecca (BRA) v Tina/Anastasija (LAT) | Quarter Final (W) | João Pessoa 2025",
-    "start": "2025-09-20T21:49:10.481011+00:00",
+    "start": "2025-09-20T22:13:06.913750+00:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/48v0u2cx/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/48v0u2cx/poster.jpg?width=1920"
   },
   {
-    "title": "Thamela/Victoria (BRA) v Shaw/Cheng (USA) | Quarter Final (W) | João Pessoa 2025",
-    "start": "2025-09-20T21:49:10.481131+00:00",
+    "title": "Ana Patrícia/Duda (BRA) v Anouk/Zoé (SUI) | Quarter Final (W) | João Pessoa 2025",
+    "start": "2025-09-20T22:13:06.913934+00:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/8dWc4fLa/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/8dWc4fLa/poster.jpg?width=1920"
-  },
-  {
-    "title": "Ana Patrícia/Duda (BRA) v Anouk/Zoé (SUI) | Quarter Final (W) | João Pessoa 2025",
-    "start": "2025-09-21T05:00:00+07:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/6FaLzap5/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/6FaLzap5/poster.jpg?width=1920"
   },
   {
     "title": "Argentina vs Italy | Round16 | Men’s World Championship Philippines 2025",
@@ -108,15 +102,21 @@
     "poster": "https://cdn.jwplayer.com/v2/media/zyQeATxI/poster.jpg?width=1920"
   },
   {
+    "title": "Qualification | Central Court | Elite 16 Rio de Janeiro 2025",
+    "start": "2025-09-24T18:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/hCKNpZkc/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/hCKNpZkc/poster.jpg?width=1920"
+  },
+  {
     "title": "Qualification | Court 2 | Elite 16 Rio de Janeiro 2025",
     "start": "2025-09-24T18:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/x5O0GUvL/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/x5O0GUvL/poster.jpg?width=1920"
   },
   {
-    "title": "Qualification | Central Court | Elite 16 Rio de Janeiro 2025",
-    "start": "2025-09-24T18:00:00+07:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/hCKNpZkc/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/hCKNpZkc/poster.jpg?width=1920"
+    "title": "TBC vs TBC | Quarter-Finals | Men’s World Championship Philippines 2025",
+    "start": "2025-09-24T19:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/lbGblqaw/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/lbGblqaw/poster.jpg?width=1920"
   }
 ]
