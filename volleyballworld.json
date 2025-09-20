@@ -1,21 +1,15 @@
 [
   {
-    "title": "Poland vs Canada | Round16 | Men’s World Championship Philippines 2025",
-    "start": "2025-09-20T13:49:38.347856+00:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/Oyl8EFAk/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/Oyl8EFAk/poster.jpg?width=1920"
-  },
-  {
-    "title": "George/Saymon (BRA) v Vinicius/Heitor (BRA) | Main Draw | João Pessoa 2025",
-    "start": "2025-09-20T13:49:38.347992+00:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/46VwPa8S/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/46VwPa8S/poster.jpg?width=1920"
-  },
-  {
     "title": "Hölting Nilsson/Andersson, E (SWE) v Mol, A./Sørum, C. (NOR) | Main Draw | João Pessoa 2025",
-    "start": "2025-09-20T13:49:38.348889+00:00",
+    "start": "2025-09-20T14:12:39.249436+00:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/48v0u2cx/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/48v0u2cx/poster.jpg?width=1920"
+  },
+  {
+    "title": "Pedrosa/Campos (POR) v Evandro/Arthur Lanci (BRA) | Main Draw | João Pessoa 2025",
+    "start": "2025-09-20T14:12:39.249553+00:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/46VwPa8S/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/46VwPa8S/poster.jpg?width=1920"
   },
   {
     "title": "Quarterfinals | Central Court | Elite 16 João Pessoa 2025",
@@ -118,5 +112,11 @@
     "start": "2025-09-22T03:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/wMkuBa2T/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/wMkuBa2T/poster.jpg?width=1920"
+  },
+  {
+    "title": "TBC v TBC | Gold (W) | João Pessoa 2025",
+    "start": "2025-09-22T04:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/iTtIRuji/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/iTtIRuji/poster.jpg?width=1920"
   }
 ]
