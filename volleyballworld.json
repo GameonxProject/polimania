@@ -1,13 +1,7 @@
 [
   {
-    "title": "Carol/Rebecca (BRA) v Paulikiene/Raupelyte (LTU) | Main Draw | João Pessoa 2025",
-    "start": "2025-09-20T17:36:27.971212+00:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/46VwPa8S/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/46VwPa8S/poster.jpg?width=1920"
-  },
-  {
-    "title": "Shaw/Cheng (USA) v Taiana Lima/Talita (BRA) | Main Draw | João Pessoa 2025",
-    "start": "2025-09-20T17:36:27.971333+00:00",
+    "title": "Hammarberg/Berger T. (AUT) v Bassereau/Aye, C. (FRA) | Quarter Final (M) | João Pessoa 2025",
+    "start": "2025-09-20T17:49:36.628648+00:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/48v0u2cx/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/48v0u2cx/poster.jpg?width=1920"
   },
@@ -16,12 +10,6 @@
     "start": "2025-09-21T02:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/8dWc4fLa/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/8dWc4fLa/poster.jpg?width=1920"
-  },
-  {
-    "title": "Hammarberg/Berger T. (AUT) v Bassereau/Aye, C. (FRA) | Quarter Final (M) | João Pessoa 2025",
-    "start": "2025-09-21T02:00:00+07:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/cSLluoLd/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/cSLluoLd/poster.jpg?width=1920"
   },
   {
     "title": "Evandro/Arthur Lanci (BRA) v Vinicius/Heitor (BRA) | Quarter Final (M) | João Pessoa 2025",
@@ -118,5 +106,17 @@
     "start": "2025-09-22T04:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/iTtIRuji/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/iTtIRuji/poster.jpg?width=1920"
+  },
+  {
+    "title": "Bulgaria vs Portugal | Round16 | Men’s World Championship Philippines 2025",
+    "start": "2025-09-22T14:30:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/rL6cipOy/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/rL6cipOy/poster.jpg?width=1920"
+  },
+  {
+    "title": "USA vs Slovenia | Round16 | Men’s World Championship Philippines 2025",
+    "start": "2025-09-22T19:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/vivgmByl/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/vivgmByl/poster.jpg?width=1920"
   }
 ]
