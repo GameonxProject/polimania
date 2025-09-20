@@ -1,13 +1,13 @@
 [
   {
-    "title": "Melissa/Brandie (CAN) v Cannon/Kraft (USA) | Quarter Final (W) | João Pessoa 2025",
-    "start": "2025-09-20T21:35:36.325992+00:00",
+    "title": "Carol/Rebecca (BRA) v Tina/Anastasija (LAT) | Quarter Final (W) | João Pessoa 2025",
+    "start": "2025-09-20T21:49:10.481011+00:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/48v0u2cx/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/48v0u2cx/poster.jpg?width=1920"
   },
   {
     "title": "Thamela/Victoria (BRA) v Shaw/Cheng (USA) | Quarter Final (W) | João Pessoa 2025",
-    "start": "2025-09-20T21:35:36.326135+00:00",
+    "start": "2025-09-20T21:49:10.481131+00:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/8dWc4fLa/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/8dWc4fLa/poster.jpg?width=1920"
   },
@@ -16,12 +16,6 @@
     "start": "2025-09-21T05:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/6FaLzap5/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/6FaLzap5/poster.jpg?width=1920"
-  },
-  {
-    "title": "Carol/Rebecca (BRA) v Tina/Anastasija (LAT) | Quarter Final (W) | João Pessoa 2025",
-    "start": "2025-09-21T05:00:00+07:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/j4vHZXie/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/j4vHZXie/poster.jpg?width=1920"
   },
   {
     "title": "Argentina vs Italy | Round16 | Men’s World Championship Philippines 2025",
@@ -36,13 +30,13 @@
     "poster": "https://cdn.jwplayer.com/v2/media/ZKFIcsJ5/poster.jpg?width=1920"
   },
   {
-    "title": "Semifinals Day 5 | Central Court | Elite 16 João Pessoa 2025",
+    "title": "Bassereau/Aye, C. (FRA) v van de Velde/Brouwer (NED) | Semi-Final (M) | João Pessoa 2025",
     "start": "2025-09-21T19:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/6IZojjzy/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/6IZojjzy/poster.jpg?width=1920"
   },
   {
-    "title": "TBC v TBC | Semi-Final (M) | João Pessoa 2025",
+    "title": "Boermans/de Groot (NED) v Evandro/Arthur Lanci (BRA) | Semi-Final (M) | João Pessoa 2025",
     "start": "2025-09-21T20:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/WBrIjIlf/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/WBrIjIlf/poster.jpg?width=1920"
@@ -118,5 +112,11 @@
     "start": "2025-09-24T18:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/x5O0GUvL/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/x5O0GUvL/poster.jpg?width=1920"
+  },
+  {
+    "title": "Qualification | Central Court | Elite 16 Rio de Janeiro 2025",
+    "start": "2025-09-24T18:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/hCKNpZkc/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/hCKNpZkc/poster.jpg?width=1920"
   }
 ]
