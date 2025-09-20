@@ -12,12 +12,6 @@
     "poster": "https://cdn.jwplayer.com/v2/media/Evh0mcie/poster.jpg?width=1920"
   },
   {
-    "title": "Turkiye vs Netherlands | Round16 | Men’s World Championship Philippines 2025",
-    "start": "2025-09-20T09:49:40.138902+00:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/8tPWLkcp/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/8tPWLkcp/poster.jpg?width=1920"
-  },
-  {
     "title": "Poland vs Canada | Round16 | Men’s World Championship Philippines 2025",
     "start": "2025-09-20T19:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/Oyl8EFAk/live.isml/.m3u8",
@@ -118,5 +112,11 @@
     "start": "2025-09-22T02:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/JAUzgwi3/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/JAUzgwi3/poster.jpg?width=1920"
+  },
+  {
+    "title": "TBC v TBC | Gold (M) | João Pessoa 2025",
+    "start": "2025-09-22T03:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/wMkuBa2T/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/wMkuBa2T/poster.jpg?width=1920"
   }
 ]
