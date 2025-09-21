@@ -1,12 +1,6 @@
 [
   {
-    "title": "Ana Patrícia/Duda (BRA) v Cannon/Kraft (USA) | Semi-Final (W) | João Pessoa 2025",
-    "start": "2025-09-21T16:16:53.667508+00:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/6IZojjzy/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/6IZojjzy/poster.jpg?width=1920"
-  },
-  {
-    "title": "Bronze & Gold Day 5 | Central Court | Elite 16 João Pessoa 2025",
+    "title": "Boermans/de Groot (NED) v van de Velde/Brouwer (NED) | Bronze (M) | João Pessoa 2025",
     "start": "2025-09-22T01:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/6feNMD72/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/6feNMD72/poster.jpg?width=1920"
@@ -118,5 +112,11 @@
     "start": "2025-09-26T19:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/IrYjfyaq/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/IrYjfyaq/poster.jpg?width=1920"
+  },
+  {
+    "title": "Main Draw Day 3 | Court 2 | Elite 16 Rio de Janeiro 2025",
+    "start": "2025-09-26T19:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/ja6bvU2h/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/ja6bvU2h/poster.jpg?width=1920"
   }
 ]
