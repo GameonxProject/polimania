@@ -1,15 +1,9 @@
 [
   {
-    "title": "Carol/Rebecca (BRA) v Ana Patrícia/Duda (BRA) | Bronze (W) | João Pessoa 2025",
-    "start": "2025-09-21T19:35:57.755882+00:00",
+    "title": "Evandro/Arthur Lanci (BRA) v Bassereau/Aye, C. (FRA) | Gold (M) | João Pessoa 2025",
+    "start": "2025-09-21T19:49:38.643386+00:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/6feNMD72/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/6feNMD72/poster.jpg?width=1920"
-  },
-  {
-    "title": "TBC v TBC | Gold (M) | João Pessoa 2025",
-    "start": "2025-09-22T03:00:00+07:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/wMkuBa2T/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/wMkuBa2T/poster.jpg?width=1920"
   },
   {
     "title": "TBC v TBC | Gold (W) | João Pessoa 2025",
@@ -118,5 +112,11 @@
     "start": "2025-09-27T13:30:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/nfhRIwHV/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/nfhRIwHV/poster.jpg?width=1920"
+  },
+  {
+    "title": "TBC vs TBC | Semi-Finals | Men’s World Championship Philippines 2025",
+    "start": "2025-09-27T17:30:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/7hJZy46a/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/7hJZy46a/poster.jpg?width=1920"
   }
 ]
