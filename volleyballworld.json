@@ -1,11 +1,5 @@
 [
   {
-    "title": "Argentina vs Italy | Round16 | Men’s World Championship Philippines 2025",
-    "start": "2025-09-21T09:14:23.047703+00:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/8wnJv8G0/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/8wnJv8G0/poster.jpg?width=1920"
-  },
-  {
     "title": "Belgium vs Finland | Round16 | Men’s World Championship Philippines 2025",
     "start": "2025-09-21T19:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/ZKFIcsJ5/live.isml/.m3u8",
@@ -118,5 +112,11 @@
     "start": "2025-09-25T01:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/FyX8KEur/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/FyX8KEur/poster.jpg?width=1920"
+  },
+  {
+    "title": "TBC vs TBC | Quarter-Finals | Men’s World Championship Philippines 2025",
+    "start": "2025-09-25T14:30:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/bnhw84uO/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/bnhw84uO/poster.jpg?width=1920"
   }
 ]
