@@ -1,15 +1,9 @@
 [
   {
-    "title": "Boermans/de Groot (NED) v Evandro/Arthur Lanci (BRA) | Semi-Final (M) | João Pessoa 2025",
-    "start": "2025-09-21T13:49:11.390326+00:00",
+    "title": "Carol/Rebecca (BRA) v Shaw/Cheng (USA) | Semi-Final (W) | João Pessoa 2025",
+    "start": "2025-09-21T14:12:22.030553+00:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/6IZojjzy/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/6IZojjzy/poster.jpg?width=1920"
-  },
-  {
-    "title": "Carol/Rebecca (BRA) v Shaw/Cheng (USA) | Semi-Final (W) | João Pessoa 2025",
-    "start": "2025-09-21T21:00:00+07:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/chXpoZtm/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/chXpoZtm/poster.jpg?width=1920"
   },
   {
     "title": "Ana Patrícia/Duda (BRA) v Cannon/Kraft (USA) | Semi-Final (W) | João Pessoa 2025",
@@ -118,5 +112,11 @@
     "start": "2025-09-25T19:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/oQqw5L8b/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/oQqw5L8b/poster.jpg?width=1920"
+  },
+  {
+    "title": "Main Draw Day 2 | Central Court | Elite 16 Rio de Janeiro 2025",
+    "start": "2025-09-25T19:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/jiAoy8qH/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/jiAoy8qH/poster.jpg?width=1920"
   }
 ]
