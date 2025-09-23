@@ -1,11 +1,5 @@
 [
   {
-    "title": "Serbia vs Iran | Round16 | Men’s World Championship Philippines 2025",
-    "start": "2025-09-23T14:42:11.040175+00:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/gR6H4GAN/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/gR6H4GAN/poster.jpg?width=1920"
-  },
-  {
     "title": "Italy vs Belgium | Quarter-Finals | Men’s World Championship Philippines 2025",
     "start": "2025-09-24T14:30:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/zyQeATxI/live.isml/.m3u8",
@@ -118,5 +112,11 @@
     "start": "2025-09-28T03:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/TgMQIeNK/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/TgMQIeNK/poster.jpg?width=1920"
+  },
+  {
+    "title": "TBD v TBD | Quarter Final (M) | Rio de Janeiro 2025",
+    "start": "2025-09-28T03:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/P25qH1Ub/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/P25qH1Ub/poster.jpg?width=1920"
   }
 ]
