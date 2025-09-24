@@ -6,16 +6,16 @@
     "poster": "https://cdn.jwplayer.com/v2/media/zyQeATxI/poster.jpg?width=1920"
   },
   {
-    "title": "Qualification | Court 2 | Elite 16 Rio de Janeiro 2025",
-    "start": "2025-09-24T18:00:00+07:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/x5O0GUvL/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/x5O0GUvL/poster.jpg?width=1920"
-  },
-  {
     "title": "Qualification | Central Court | Elite 16 Rio de Janeiro 2025",
     "start": "2025-09-24T18:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/hCKNpZkc/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/hCKNpZkc/poster.jpg?width=1920"
+  },
+  {
+    "title": "Qualification | Court 2 | Elite 16 Rio de Janeiro 2025",
+    "start": "2025-09-24T18:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/x5O0GUvL/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/x5O0GUvL/poster.jpg?width=1920"
   },
   {
     "title": "Poland vs Turkiye | Quarter-Finals | Men’s World Championship Philippines 2025",
@@ -36,13 +36,13 @@
     "poster": "https://cdn.jwplayer.com/v2/media/FyX8KEur/poster.jpg?width=1920"
   },
   {
-    "title": "TBC vs TBC | Quarter-Finals | Men’s World Championship Philippines 2025",
+    "title": "Czechia vs Iran | Quarter-Finals | Men’s World Championship Philippines 2025",
     "start": "2025-09-25T14:30:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/bnhw84uO/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/bnhw84uO/poster.jpg?width=1920"
   },
   {
-    "title": "TBC vs TBC | Quarter-Finals | Men’s World Championship Philippines 2025",
+    "title": "USA vs Bulgaria | Quarter-Finals | Men’s World Championship Philippines 2025",
     "start": "2025-09-25T19:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/xLX71xhi/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/xLX71xhi/poster.jpg?width=1920"
@@ -90,33 +90,33 @@
     "poster": "https://cdn.jwplayer.com/v2/media/TgMQIeNK/poster.jpg?width=1920"
   },
   {
-    "title": "TBC vs TBC | Semi-Finals | Men’s World Championship Philippines 2025",
-    "start": "2025-09-27T13:30:00+07:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/nfhRIwHV/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/nfhRIwHV/poster.jpg?width=1920"
-  },
-  {
-    "title": "TBC vs TBC | Semi-Finals | Men’s World Championship Philippines 2025",
-    "start": "2025-09-27T17:30:00+07:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/7hJZy46a/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/7hJZy46a/poster.jpg?width=1920"
-  },
-  {
-    "title": "Main Draw Day 4 & QF | Court 2 | Elite 16 Rio de Janeiro 2025",
-    "start": "2025-09-27T19:00:00+07:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/paoRyVgV/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/paoRyVgV/poster.jpg?width=1920"
-  },
-  {
-    "title": "Main Draw Day 4 & QF | Central Court | Elite 16 Rio de Janeiro 2025",
-    "start": "2025-09-27T19:00:00+07:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/lRbvPmu7/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/lRbvPmu7/poster.jpg?width=1920"
-  },
-  {
     "title": "TBD v TBD | Quarter Final (M) | Rio de Janeiro 2025",
     "start": "2025-09-28T03:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/P25qH1Ub/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/P25qH1Ub/poster.jpg?width=1920"
+  },
+  {
+    "title": "TBD v TBD | Quarter Final (W) | Rio de Janeiro 2025",
+    "start": "2025-09-28T04:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/bCSBIhrq/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/bCSBIhrq/poster.jpg?width=1920"
+  },
+  {
+    "title": "TBD v TBD | Quarter Final (W) | Rio de Janeiro 2025",
+    "start": "2025-09-28T04:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/ifLo8zal/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/ifLo8zal/poster.jpg?width=1920"
+  },
+  {
+    "title": "TBD v TBD | Quarter Final (W) | Rio de Janeiro 2025",
+    "start": "2025-09-28T05:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/ZNl7MUah/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/ZNl7MUah/poster.jpg?width=1920"
+  },
+  {
+    "title": "TBC vs TBC | Semi-Finals | Men’s World Championship Philippines 2025",
+    "start": "2025-09-27T13:30:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/nfhRIwHV/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/nfhRIwHV/poster.jpg?width=1920"
   }
 ]
