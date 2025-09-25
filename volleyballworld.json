@@ -1,19 +1,13 @@
 [
   {
-    "title": "USA vs Bulgaria | Quarter-Finals | Men’s World Championship Philippines 2025",
-    "start": "2025-09-25T14:43:00.920441+00:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/xLX71xhi/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/xLX71xhi/poster.jpg?width=1920"
-  },
-  {
-    "title": "Tina/Anastasija (LAT) v Stam/Schoon (NED) | Main Draw | Rio de Janeiro 2025",
-    "start": "2025-09-25T14:43:00.920571+00:00",
+    "title": "Vieira/Chamereau (FRA) v Scampoli/Bianchi (ITA) | Main Draw | Rio de Janeiro 2025",
+    "start": "2025-09-25T14:52:54.151811+00:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/oQqw5L8b/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/oQqw5L8b/poster.jpg?width=1920"
   },
   {
     "title": "Carol/Rebecca (BRA) v Donlin/Denaburg (USA) | Main Draw | Rio de Janeiro 2025",
-    "start": "2025-09-25T14:43:00.920645+00:00",
+    "start": "2025-09-25T14:52:54.151931+00:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/jiAoy8qH/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/jiAoy8qH/poster.jpg?width=1920"
   },
@@ -118,5 +112,11 @@
     "start": "2025-09-29T04:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/Fq3SnNMq/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/Fq3SnNMq/poster.jpg?width=1920"
+  },
+  {
+    "title": "TBC vs TBC | Bronze Match | Men’s World Championship Philippines 2025",
+    "start": "2025-09-28T13:30:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/4hiPqEi2/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/4hiPqEi2/poster.jpg?width=1920"
   }
 ]
