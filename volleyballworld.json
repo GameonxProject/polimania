@@ -1,11 +1,5 @@
 [
   {
-    "title": "Czechia vs Iran | Quarter-Finals | Men’s World Championship Philippines 2025",
-    "start": "2025-09-25T09:39:18.269743+00:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/bnhw84uO/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/bnhw84uO/poster.jpg?width=1920"
-  },
-  {
     "title": "USA vs Bulgaria | Quarter-Finals | Men’s World Championship Philippines 2025",
     "start": "2025-09-25T19:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/xLX71xhi/live.isml/.m3u8",
@@ -118,5 +112,11 @@
     "start": "2025-09-29T03:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/b1O9ptXF/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/b1O9ptXF/poster.jpg?width=1920"
+  },
+  {
+    "title": "TBD v TBD | Gold (W) | Rio de Janeiro 2025",
+    "start": "2025-09-29T04:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/Fq3SnNMq/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/Fq3SnNMq/poster.jpg?width=1920"
   }
 ]
