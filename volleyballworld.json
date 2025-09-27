@@ -48,12 +48,6 @@
     "poster": "https://cdn.jwplayer.com/v2/media/PwXwZJVf/poster.jpg?width=1920"
   },
   {
-    "title": "Czechia vs Bulgaria | Semi-Finals | Men’s World Championship Philippines 2025",
-    "start": "2025-09-27T08:39:59.218916+00:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/nfhRIwHV/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/nfhRIwHV/poster.jpg?width=1920"
-  },
-  {
     "title": "Italy vs Poland | Semi-Finals | Men’s World Championship Philippines 2025",
     "start": "2025-09-27T17:30:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/7hJZy46a/live.isml/.m3u8",
@@ -118,5 +112,11 @@
     "start": "2025-09-28T21:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/kqxCq9Vc/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/kqxCq9Vc/poster.jpg?width=1920"
+  },
+  {
+    "title": "TBD v TBD | Semi-Final (W) | Rio de Janeiro 2025",
+    "start": "2025-09-28T22:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/EJ4KHQ5m/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/EJ4KHQ5m/poster.jpg?width=1920"
   }
 ]
