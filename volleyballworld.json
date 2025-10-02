@@ -24,16 +24,16 @@
     "poster": "https://cdn.jwplayer.com/v2/media/IWKfmqSk/poster.jpg?width=1920"
   },
   {
-    "title": "Eurotek Laica Uyba -  Prosecco Doc A.Carraro Imoco Conegliano | Round 1",
-    "start": "2025-10-07T01:30:00+07:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/Y4mVVbd3/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/Y4mVVbd3/poster.jpg?width=1920"
-  },
-  {
     "title": "Numia Vero Volley Milano -  Bergamo | Round 1",
     "start": "2025-10-07T01:30:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/AqFkvdkI/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/AqFkvdkI/poster.jpg?width=1920"
+  },
+  {
+    "title": "Eurotek Laica Uyba -  Prosecco Doc A.Carraro Imoco Conegliano | Round 1",
+    "start": "2025-10-07T01:30:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/Y4mVVbd3/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/Y4mVVbd3/poster.jpg?width=1920"
   },
   {
     "title": "Il Bisonte Firenze -  Reale Mutua Fenera Chieri 76 | Round 1",
@@ -42,16 +42,16 @@
     "poster": "https://cdn.jwplayer.com/v2/media/HXtu7uyE/poster.jpg?width=1920"
   },
   {
-    "title": "Qualification | Central Court | Elite 16 Newport 2025",
-    "start": "2025-10-07T22:00:00+07:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/HoEwDSAc/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/HoEwDSAc/poster.jpg?width=1920"
-  },
-  {
     "title": "Qualification | Court 3 | Elite 16 Newport 2025",
     "start": "2025-10-07T22:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/rVfA5UbN/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/rVfA5UbN/poster.jpg?width=1920"
+  },
+  {
+    "title": "Qualification | Central Court | Elite 16 Newport 2025",
+    "start": "2025-10-07T22:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/HoEwDSAc/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/HoEwDSAc/poster.jpg?width=1920"
   },
   {
     "title": "Qualification | Court 2 | Elite 16 Newport 2025",
@@ -60,16 +60,16 @@
     "poster": "https://cdn.jwplayer.com/v2/media/457Bofov/poster.jpg?width=1920"
   },
   {
-    "title": "Main Draw | Day 2 | Court 2 | Elite 16 Newport 2025",
-    "start": "2025-10-08T22:00:00+07:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/CUjhD5NE/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/CUjhD5NE/poster.jpg?width=1920"
-  },
-  {
     "title": "Main Draw | Day 2 | Court 3 | Elite 16 Newport 2025",
     "start": "2025-10-08T22:00:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/RQ04zF4L/live.isml/.m3u8",
     "poster": "https://cdn.jwplayer.com/v2/media/RQ04zF4L/poster.jpg?width=1920"
+  },
+  {
+    "title": "Main Draw | Day 2 | Court 2 | Elite 16 Newport 2025",
+    "start": "2025-10-08T22:00:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/CUjhD5NE/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/CUjhD5NE/poster.jpg?width=1920"
   },
   {
     "title": "Main Draw | Day 2 | Central Court | Elite 16 Newport 2025",
@@ -96,6 +96,12 @@
     "poster": "https://cdn.jwplayer.com/v2/media/tEwwx53m/poster.jpg?width=1920"
   },
   {
+    "title": "VolleyWroclaw - ECO HARPOON LOS Nowy Dwor Mazowiecki | Round 1",
+    "start": "2025-10-09T22:30:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/5JW618u4/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/5JW618u4/poster.jpg?width=1920"
+  },
+  {
     "title": "Kurobe Aqua Fairies - Okayama Seagulls | Round 1-A",
     "start": "2025-10-10T17:05:00+07:00",
     "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/dKyD6HSy/live.isml/.m3u8",
@@ -108,15 +114,9 @@
     "poster": "https://cdn.jwplayer.com/v2/media/lt7Nznte/poster.jpg?width=1920"
   },
   {
-    "title": "Main Draw & Quarter Finals | Day 4 | Central Court | Elite 16 Newport 2025",
-    "start": "2025-10-10T23:00:00+07:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/9yYI9qvJ/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/9yYI9qvJ/poster.jpg?width=1920"
-  },
-  {
-    "title": "Main Draw & Quarter Finals | Day 4 | Court 2 | Elite 16 Newport 2025",
-    "start": "2025-10-10T23:00:00+07:00",
-    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/bbepfcok/live.isml/.m3u8",
-    "poster": "https://cdn.jwplayer.com/v2/media/bbepfcok/poster.jpg?width=1920"
+    "title": "PGE Budowlani Lodz - ITA TOOLS Stal Mielec | Round 1",
+    "start": "2025-10-10T22:30:00+07:00",
+    "src": "https://livecdn.euw1-0005.jwplive.com/live/sites/fM9jRrkn/media/TmNcJDaY/live.isml/.m3u8",
+    "poster": "https://cdn.jwplayer.com/v2/media/TmNcJDaY/poster.jpg?width=1920"
   }
 ]
